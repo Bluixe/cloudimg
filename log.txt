@@ -1,0 +1,1517 @@
+(base) bluixe@wenhao-ubuntu:~/Project/kaldi/egs/aishell/s5$ ./run.sh
+local/aishell_prepare_dict.sh: AISHELL dict preparation succeeded
+Warning: expected 141925 data data files, found 29507
+Preparing data/local/train transcriptions
+Preparing data/local/dev transcriptions
+Preparing data/local/test transcriptions
+local/aishell_data_prep.sh: AISHELL data preparation succeeded
+utils/prepare_lang.sh --position-dependent-phones false data/local/dict <SPOKEN_NOISE> data/local/lang data/lang
+Checking data/local/dict/silence_phones.txt ...
+--> reading data/local/dict/silence_phones.txt
+--> text seems to be UTF-8 or ASCII, checking whitespaces
+--> text contains only allowed whitespaces
+--> data/local/dict/silence_phones.txt is OK
+
+Checking data/local/dict/optional_silence.txt ...
+--> reading data/local/dict/optional_silence.txt
+--> text seems to be UTF-8 or ASCII, checking whitespaces
+--> text contains only allowed whitespaces
+--> data/local/dict/optional_silence.txt is OK
+
+Checking data/local/dict/nonsilence_phones.txt ...
+--> reading data/local/dict/nonsilence_phones.txt
+--> text seems to be UTF-8 or ASCII, checking whitespaces
+--> text contains only allowed whitespaces
+--> data/local/dict/nonsilence_phones.txt is OK
+
+Checking disjoint: silence_phones.txt, nonsilence_phones.txt
+--> disjoint property is OK.
+
+Checking data/local/dict/lexicon.txt
+--> reading data/local/dict/lexicon.txt
+--> text seems to be UTF-8 or ASCII, checking whitespaces
+--> text contains only allowed whitespaces
+--> data/local/dict/lexicon.txt is OK
+
+Checking data/local/dict/lexiconp.txt
+--> reading data/local/dict/lexiconp.txt
+--> text seems to be UTF-8 or ASCII, checking whitespaces
+--> text contains only allowed whitespaces
+--> data/local/dict/lexiconp.txt is OK
+
+Checking lexicon pair data/local/dict/lexicon.txt and data/local/dict/lexiconp.txt
+--> lexicon pair data/local/dict/lexicon.txt and data/local/dict/lexiconp.txt match
+
+Checking data/local/dict/extra_questions.txt ...
+--> reading data/local/dict/extra_questions.txt
+--> text seems to be UTF-8 or ASCII, checking whitespaces
+--> text contains only allowed whitespaces
+--> data/local/dict/extra_questions.txt is OK
+--> SUCCESS [validating dictionary directory data/local/dict]
+
+fstaddselfloops data/lang/phones/wdisambig_phones.int data/lang/phones/wdisambig_words.int 
+prepare_lang.sh: validating output directory
+utils/validate_lang.pl data/lang
+Checking existence of separator file
+separator file data/lang/subword_separator.txt is empty or does not exist, deal in word case.
+Checking data/lang/phones.txt ...
+--> text seems to be UTF-8 or ASCII, checking whitespaces
+--> text contains only allowed whitespaces
+--> data/lang/phones.txt is OK
+
+Checking words.txt: #0 ...
+--> text seems to be UTF-8 or ASCII, checking whitespaces
+--> text contains only allowed whitespaces
+--> data/lang/words.txt is OK
+
+Checking disjoint: silence.txt, nonsilence.txt, disambig.txt ...
+--> silence.txt and nonsilence.txt are disjoint
+--> silence.txt and disambig.txt are disjoint
+--> disambig.txt and nonsilence.txt are disjoint
+--> disjoint property is OK
+
+Checking sumation: silence.txt, nonsilence.txt, disambig.txt ...
+--> found no unexplainable phones in phones.txt
+
+Checking data/lang/phones/context_indep.{txt, int, csl} ...
+--> text seems to be UTF-8 or ASCII, checking whitespaces
+--> text contains only allowed whitespaces
+--> 1 entry/entries in data/lang/phones/context_indep.txt
+--> data/lang/phones/context_indep.int corresponds to data/lang/phones/context_indep.txt
+--> data/lang/phones/context_indep.csl corresponds to data/lang/phones/context_indep.txt
+--> data/lang/phones/context_indep.{txt, int, csl} are OK
+
+Checking data/lang/phones/nonsilence.{txt, int, csl} ...
+--> text seems to be UTF-8 or ASCII, checking whitespaces
+--> text contains only allowed whitespaces
+--> 216 entry/entries in data/lang/phones/nonsilence.txt
+--> data/lang/phones/nonsilence.int corresponds to data/lang/phones/nonsilence.txt
+--> data/lang/phones/nonsilence.csl corresponds to data/lang/phones/nonsilence.txt
+--> data/lang/phones/nonsilence.{txt, int, csl} are OK
+
+Checking data/lang/phones/silence.{txt, int, csl} ...
+--> text seems to be UTF-8 or ASCII, checking whitespaces
+--> text contains only allowed whitespaces
+--> 1 entry/entries in data/lang/phones/silence.txt
+--> data/lang/phones/silence.int corresponds to data/lang/phones/silence.txt
+--> data/lang/phones/silence.csl corresponds to data/lang/phones/silence.txt
+--> data/lang/phones/silence.{txt, int, csl} are OK
+
+Checking data/lang/phones/optional_silence.{txt, int, csl} ...
+--> text seems to be UTF-8 or ASCII, checking whitespaces
+--> text contains only allowed whitespaces
+--> 1 entry/entries in data/lang/phones/optional_silence.txt
+--> data/lang/phones/optional_silence.int corresponds to data/lang/phones/optional_silence.txt
+--> data/lang/phones/optional_silence.csl corresponds to data/lang/phones/optional_silence.txt
+--> data/lang/phones/optional_silence.{txt, int, csl} are OK
+
+Checking data/lang/phones/disambig.{txt, int, csl} ...
+--> text seems to be UTF-8 or ASCII, checking whitespaces
+--> text contains only allowed whitespaces
+--> 105 entry/entries in data/lang/phones/disambig.txt
+--> data/lang/phones/disambig.int corresponds to data/lang/phones/disambig.txt
+--> data/lang/phones/disambig.csl corresponds to data/lang/phones/disambig.txt
+--> data/lang/phones/disambig.{txt, int, csl} are OK
+
+Checking data/lang/phones/roots.{txt, int} ...
+--> text seems to be UTF-8 or ASCII, checking whitespaces
+--> text contains only allowed whitespaces
+--> 67 entry/entries in data/lang/phones/roots.txt
+--> data/lang/phones/roots.int corresponds to data/lang/phones/roots.txt
+--> data/lang/phones/roots.{txt, int} are OK
+
+Checking data/lang/phones/sets.{txt, int} ...
+--> text seems to be UTF-8 or ASCII, checking whitespaces
+--> text contains only allowed whitespaces
+--> 67 entry/entries in data/lang/phones/sets.txt
+--> data/lang/phones/sets.int corresponds to data/lang/phones/sets.txt
+--> data/lang/phones/sets.{txt, int} are OK
+
+Checking data/lang/phones/extra_questions.{txt, int} ...
+--> text seems to be UTF-8 or ASCII, checking whitespaces
+--> text contains only allowed whitespaces
+--> 7 entry/entries in data/lang/phones/extra_questions.txt
+--> data/lang/phones/extra_questions.int corresponds to data/lang/phones/extra_questions.txt
+--> data/lang/phones/extra_questions.{txt, int} are OK
+
+Checking optional_silence.txt ...
+--> reading data/lang/phones/optional_silence.txt
+--> data/lang/phones/optional_silence.txt is OK
+
+Checking disambiguation symbols: #0 and #1
+--> data/lang/phones/disambig.txt has "#0" and "#1"
+--> data/lang/phones/disambig.txt is OK
+
+Checking topo ...
+
+Checking word-level disambiguation symbols...
+--> data/lang/phones/wdisambig.txt exists (newer prepare_lang.sh)
+Checking data/lang/oov.{txt, int} ...
+--> text seems to be UTF-8 or ASCII, checking whitespaces
+--> text contains only allowed whitespaces
+--> 1 entry/entries in data/lang/oov.txt
+--> data/lang/oov.int corresponds to data/lang/oov.txt
+--> data/lang/oov.{txt, int} are OK
+
+--> data/lang/L.fst is olabel sorted
+--> data/lang/L_disambig.fst is olabel sorted
+--> SUCCESS [validating lang directory data/lang]
+/home/bluixe/Project/kaldi/tools/kaldi_lm/train_lm.sh: length of input is 8000 sentences; limiting heldout_sent 
+...  to 1600 (vs. default = 10000)
+Getting raw N-gram counts
+discount_ngrams: for n-gram order 1, D=0.000000, tau=0.000000 phi=1.000000
+discount_ngrams: for n-gram order 2, D=0.000000, tau=0.000000 phi=1.000000
+discount_ngrams: for n-gram order 3, D=1.000000, tau=0.000000 phi=1.000000
+Iteration 1/6 of optimizing discounting parameters
+discount_ngrams: for n-gram order 1, D=0.600000, tau=0.675000 phi=2.000000
+discount_ngrams: for n-gram order 2, D=0.800000, tau=0.675000 phi=2.000000
+discount_ngrams: for n-gram order 3, D=0.000000, tau=0.825000 phi=2.000000
+discount_ngrams: for n-gram order 1, D=0.600000, tau=0.900000 phi=2.000000
+discount_ngrams: for n-gram order 2, D=0.800000, tau=0.900000 phi=2.000000
+discount_ngrams: for n-gram order 3, D=0.000000, tau=1.100000 phi=2.000000
+discount_ngrams: for n-gram order 1, D=0.600000, tau=1.215000 phi=2.000000
+discount_ngrams: for n-gram order 2, D=0.800000, tau=1.215000 phi=2.000000
+discount_ngrams: for n-gram order 3, D=0.000000, tau=1.485000 phi=2.000000
+interpolate_ngrams: 137074 words in wordslist
+interpolate_ngrams: 137074 words in wordslist
+interpolate_ngrams: 137074 words in wordslist
+Perplexity over 15844.000000 words is 1572.461852
+Perplexity over 15844.000000 words (excluding 0.000000 OOVs) is 1572.461852
+Perplexity over 15844.000000 words is 1612.372078
+Perplexity over 15844.000000 words (excluding 0.000000 OOVs) is 1612.372078
+Perplexity over 15844.000000 words is 1592.509891
+Perplexity over 15844.000000 words (excluding 0.000000 OOVs) is 1592.509891
+
+real    0m0.498s
+user    0m0.578s
+sys     0m0.029s
+
+real    0m0.503s
+user    0m0.590s
+sys     0m0.021s
+
+real    0m0.504s
+user    0m0.578s
+sys     0m0.040s
+Projected perplexity change from setting alpha=0.0957820717848812 is 1572.461852->1569.14505545985, reduction of 3.31679654015147
+Alpha value on iter 1 is 0.0957820717848812
+Iteration 2/6 of optimizing discounting parameters
+discount_ngrams: for n-gram order 1, D=0.600000, tau=0.986204 phi=2.000000
+discount_ngrams: for n-gram order 2, D=0.800000, tau=0.986204 phi=2.000000
+discount_ngrams: for n-gram order 3, D=0.000000, tau=0.904020 phi=2.000000
+discount_ngrams: for n-gram order 1, D=0.600000, tau=0.986204 phi=2.000000
+discount_ngrams: for n-gram order 2, D=0.800000, tau=0.986204 phi=2.000000
+discount_ngrams: for n-gram order 3, D=0.000000, tau=1.205360 phi=2.000000
+discount_ngrams: for n-gram order 1, D=0.600000, tau=0.986204 phi=2.000000
+discount_ngrams: for n-gram order 2, D=0.800000, tau=0.986204 phi=2.000000
+discount_ngrams: for n-gram order 3, D=0.000000, tau=1.627236 phi=2.000000
+interpolate_ngrams: 137074 words in wordslist
+interpolate_ngrams: 137074 words in wordslist
+interpolate_ngrams: 137074 words in wordslist
+Perplexity over 15844.000000 words is 1580.048547
+Perplexity over 15844.000000 words (excluding 0.000000 OOVs) is 1580.048547
+Perplexity over 15844.000000 words is 1580.138615
+Perplexity over 15844.000000 words (excluding 0.000000 OOVs) is 1580.138615
+Perplexity over 15844.000000 words is 1580.066186
+Perplexity over 15844.000000 words (excluding 0.000000 OOVs) is 1580.066186
+
+real    0m0.528s
+user    0m0.623s
+sys     0m0.030s
+
+real    0m0.527s
+user    0m0.600s
+sys     0m0.049s
+
+real    0m0.532s
+user    0m0.611s
+sys     0m0.046s
+Projected perplexity change from setting alpha=-0.0604460425263414 is 1580.048547->1580.04655028156, reduction of 0.00199671844029581
+Alpha value on iter 2 is -0.0604460425263414
+Iteration 3/6 of optimizing discounting parameters
+discount_ngrams: for n-gram order 1, D=0.600000, tau=0.986204 phi=2.000000
+discount_ngrams: for n-gram order 2, D=0.800000, tau=0.986204 phi=2.000000
+discount_ngrams: for n-gram order 3, D=0.000000, tau=1.132501 phi=1.750000
+discount_ngrams: for n-gram order 1, D=0.600000, tau=0.986204 phi=2.000000
+discount_ngrams: for n-gram order 2, D=0.800000, tau=0.986204 phi=2.000000
+discount_ngrams: for n-gram order 3, D=0.000000, tau=1.132501 phi=2.000000
+discount_ngrams: for n-gram order 1, D=0.600000, tau=0.986204 phi=2.000000
+discount_ngrams: for n-gram order 2, D=0.800000, tau=0.986204 phi=2.000000
+discount_ngrams: for n-gram order 3, D=0.000000, tau=1.132501 phi=2.350000
+interpolate_ngrams: 137074 words in wordslist
+interpolate_ngrams: 137074 words in wordslist
+interpolate_ngrams: 137074 words in wordslist
+Perplexity over 15844.000000 words is 1579.951076
+Perplexity over 15844.000000 words (excluding 0.000000 OOVs) is 1579.951076
+Perplexity over 15844.000000 words is 1580.017226
+Perplexity over 15844.000000 words (excluding 0.000000 OOVs) is 1580.017226
+Perplexity over 15844.000000 words is 1580.148662
+Perplexity over 15844.000000 words (excluding 0.000000 OOVs) is 1580.148662
+
+real    0m0.516s
+user    0m0.596s
+sys     0m0.038s
+
+real    0m0.525s
+user    0m0.628s
+sys     0m0.020s
+
+real    0m0.527s
+user    0m0.586s
+sys     0m0.061s
+optimize_alpha.pl: alpha=-0.840577190535565 is too negative, limiting it to -0.5
+Projected perplexity change from setting alpha=-0.5 is 1580.017226->1579.90803671429, reduction of 0.10918928571391
+Alpha value on iter 3 is -0.5
+Iteration 4/6 of optimizing discounting parameters
+discount_ngrams: for n-gram order 1, D=0.600000, tau=0.986204 phi=2.000000
+discount_ngrams: for n-gram order 2, D=0.600000, tau=0.986204 phi=2.000000
+discount_ngrams: for n-gram order 3, D=0.000000, tau=1.132501 phi=1.500000
+discount_ngrams: for n-gram order 1, D=0.600000, tau=0.986204 phi=2.000000
+discount_ngrams: for n-gram order 2, D=0.800000, tau=0.986204 phi=2.000000
+discount_ngrams: for n-gram order 3, D=0.000000, tau=1.132501 phi=1.500000
+discount_ngrams: for n-gram order 1, D=0.600000, tau=0.986204 phi=2.000000
+discount_ngrams: for n-gram order 2, D=1.080000, tau=0.986204 phi=2.000000
+discount_ngrams: for n-gram order 3, D=0.000000, tau=1.132501 phi=1.500000
+interpolate_ngrams: 137074 words in wordslist
+interpolate_ngrams: 137074 words in wordslist
+interpolate_ngrams: 137074 words in wordslist
+Perplexity over 15844.000000 words is 1839.880820
+Perplexity over 15844.000000 words (excluding 0.000000 OOVs) is 1839.880820
+
+real    0m0.408s
+user    0m0.438s
+sys     0m0.057s
+Perplexity over 15844.000000 words is 1579.928243
+Perplexity over 15844.000000 words (excluding 0.000000 OOVs) is 1579.928243
+
+real    0m0.573s
+user    0m0.672s
+sys     0m0.022s
+Perplexity over 15844.000000 words is 1620.067494
+Perplexity over 15844.000000 words (excluding 0.000000 OOVs) is 1620.067494
+
+real    0m0.598s
+user    0m0.719s
+sys     0m0.038s
+Projected perplexity change from setting alpha=-0.0716752578920369 is 1579.928243->1572.19415650666, reduction of 7.73408649334465
+Alpha value on iter 4 is -0.0716752578920369
+Iteration 5/6 of optimizing discounting parameters
+discount_ngrams: for n-gram order 1, D=0.600000, tau=0.986204 phi=2.000000
+discount_ngrams: for n-gram order 2, D=0.742660, tau=0.739653 phi=2.000000
+discount_ngrams: for n-gram order 3, D=0.000000, tau=1.132501 phi=1.500000
+discount_ngrams: for n-gram order 1, D=0.600000, tau=0.986204 phi=2.000000
+discount_ngrams: for n-gram order 2, D=0.742660, tau=0.986204 phi=2.000000
+discount_ngrams: for n-gram order 3, D=0.000000, tau=1.132501 phi=1.500000
+discount_ngrams: for n-gram order 1, D=0.600000, tau=0.986204 phi=2.000000
+discount_ngrams: for n-gram order 2, D=0.742660, tau=1.331375 phi=2.000000
+discount_ngrams: for n-gram order 3, D=0.000000, tau=1.132501 phi=1.500000
+interpolate_ngrams: 137074 words in wordslist
+interpolate_ngrams: 137074 words in wordslist
+interpolate_ngrams: 137074 words in wordslist
+Perplexity over 15844.000000 words is 1579.620156
+Perplexity over 15844.000000 words (excluding 0.000000 OOVs) is 1579.620156
+
+real    0m0.540s
+user    0m0.633s
+sys     0m0.035s
+Perplexity over 15844.000000 words is 1583.020123
+Perplexity over 15844.000000 words (excluding 0.000000 OOVs) is 1583.020123
+Perplexity over 15844.000000 words is 1581.982740
+Perplexity over 15844.000000 words (excluding 0.000000 OOVs) is 1581.982740
+
+real    0m0.566s
+user    0m0.669s
+sys     0m0.016s
+
+real    0m0.564s
+user    0m0.661s
+sys     0m0.023s
+optimize_alpha.pl: objective function is not convex; returning alpha=0.7
+Projected perplexity change from setting alpha=0.7 is 1581.982740->1576.19561623333, reduction of 5.78712376666613
+Alpha value on iter 5 is 0.7
+Iteration 6/6 of optimizing discounting parameters
+discount_ngrams: for n-gram order 1, D=0.600000, tau=0.986204 phi=2.000000
+discount_ngrams: for n-gram order 2, D=0.742660, tau=1.676547 phi=1.750000
+discount_ngrams: for n-gram order 3, D=0.000000, tau=1.132501 phi=1.500000
+discount_ngrams: for n-gram order 1, D=0.600000, tau=0.986204 phi=2.000000
+discount_ngrams: for n-gram order 2, D=0.742660, tau=1.676547 phi=2.000000
+discount_ngrams: for n-gram order 3, D=0.000000, tau=1.132501 phi=1.500000
+discount_ngrams: for n-gram order 1, D=0.600000, tau=0.986204 phi=2.000000
+discount_ngrams: for n-gram order 2, D=0.742660, tau=1.676547 phi=2.350000
+discount_ngrams: for n-gram order 3, D=0.000000, tau=1.132501 phi=1.500000
+interpolate_ngrams: 137074 words in wordslist
+interpolate_ngrams: 137074 words in wordslist
+interpolate_ngrams: 137074 words in wordslist
+Perplexity over 15844.000000 words is 1579.478990
+Perplexity over 15844.000000 words (excluding 0.000000 OOVs) is 1579.478990
+
+real    0m0.523s
+user    0m0.607s
+sys     0m0.035s
+Perplexity over 15844.000000 words is 1582.694816
+Perplexity over 15844.000000 words (excluding 0.000000 OOVs) is 1582.694816
+Perplexity over 15844.000000 words is 1580.231299
+Perplexity over 15844.000000 words (excluding 0.000000 OOVs) is 1580.231299
+
+real    0m0.558s
+user    0m0.639s
+sys     0m0.038s
+
+real    0m0.568s
+user    0m0.671s
+sys     0m0.035s
+Projected perplexity change from setting alpha=-0.349046851826457 is 1580.231299->1579.4131076989, reduction of 0.818191301101251
+Alpha value on iter 6 is -0.349046851826457
+Final config is:
+D=0.6 tau=0.986203864606393 phi=2
+D=0.742659793686371 tau=1.67654656983087 phi=1.65095314817354
+D=0 tau=1.13250102028159 phi=1.5
+Discounting N-grams.
+discount_ngrams: for n-gram order 1, D=0.600000, tau=0.986204 phi=2.000000
+discount_ngrams: for n-gram order 2, D=0.742660, tau=1.676547 phi=1.650953
+discount_ngrams: for n-gram order 3, D=0.000000, tau=1.132501 phi=1.500000
+Computing final perplexity
+Building ARPA LM (perplexity computation is in background)
+interpolate_ngrams: 137074 words in wordslist
+interpolate_ngrams: 137074 words in wordslist
+Perplexity over 15844.000000 words is 1581.623712
+Perplexity over 15844.000000 words (excluding 0.000000 OOVs) is 1581.623712
+1581.623712
+Done training LM of type 3gram-mincount
+Converting 'data/local/lm/3gram-mincount/lm_unpruned.gz' to FST
+arpa2fst --disambig-symbol=#0 --read-symbol-table=data/lang_test/words.txt - data/lang_test/G.fst 
+LOG (arpa2fst[5.5.1020~1-501de]:Read():arpa-file-parser.cc:94) Reading \data\ section.
+LOG (arpa2fst[5.5.1020~1-501de]:Read():arpa-file-parser.cc:149) Reading \1-grams: section.
+LOG (arpa2fst[5.5.1020~1-501de]:Read():arpa-file-parser.cc:149) Reading \2-grams: section.
+LOG (arpa2fst[5.5.1020~1-501de]:Read():arpa-file-parser.cc:149) Reading \3-grams: section.
+LOG (arpa2fst[5.5.1020~1-501de]:RemoveRedundantStates():arpa-lm-compiler.cc:359) Reduced num-states from 179123 to 12713
+fstisstochastic data/lang_test/G.fst 
+5.54643e-06 -0.510146
+Succeeded in formatting LM: 'data/local/lm/3gram-mincount/lm_unpruned.gz'
+steps/make_mfcc_pitch.sh --cmd run.pl --mem 2G --nj 10 data/train exp/make_mfcc/train mfcc
+utils/validate_data_dir.sh: Successfully validated data-directory data/train
+steps/make_mfcc_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+steps/make_mfcc_pitch.sh: Succeeded creating MFCC and pitch features for train
+steps/compute_cmvn_stats.sh data/train exp/make_mfcc/train mfcc
+Succeeded creating CMVN stats for train
+fix_data_dir.sh: kept all 8000 utterances.
+fix_data_dir.sh: old files are kept in data/train/.backup
+steps/make_mfcc_pitch.sh --cmd run.pl --mem 2G --nj 10 data/dev exp/make_mfcc/dev mfcc
+utils/validate_data_dir.sh: Successfully validated data-directory data/dev
+steps/make_mfcc_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+steps/make_mfcc_pitch.sh: Succeeded creating MFCC and pitch features for dev
+steps/compute_cmvn_stats.sh data/dev exp/make_mfcc/dev mfcc
+Succeeded creating CMVN stats for dev
+fix_data_dir.sh: kept all 14326 utterances.
+fix_data_dir.sh: old files are kept in data/dev/.backup
+steps/make_mfcc_pitch.sh --cmd run.pl --mem 2G --nj 10 data/test exp/make_mfcc/test mfcc
+utils/validate_data_dir.sh: Successfully validated data-directory data/test
+steps/make_mfcc_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+steps/make_mfcc_pitch.sh: Succeeded creating MFCC and pitch features for test
+steps/compute_cmvn_stats.sh data/test exp/make_mfcc/test mfcc
+Succeeded creating CMVN stats for test
+fix_data_dir.sh: kept all 7176 utterances.
+fix_data_dir.sh: old files are kept in data/test/.backup
+steps/train_mono.sh --cmd run.pl --mem 2G --nj 10 data/train data/lang exp/mono
+steps/train_mono.sh: Initializing monophone system.
+steps/train_mono.sh: Compiling training graphs
+steps/train_mono.sh: Aligning data equally (pass 0)
+steps/train_mono.sh: Pass 1
+steps/train_mono.sh: Aligning data
+steps/train_mono.sh: Pass 2
+steps/train_mono.sh: Aligning data
+steps/train_mono.sh: Pass 3
+steps/train_mono.sh: Aligning data
+steps/train_mono.sh: Pass 4
+steps/train_mono.sh: Aligning data
+steps/train_mono.sh: Pass 5
+steps/train_mono.sh: Aligning data
+steps/train_mono.sh: Pass 6
+steps/train_mono.sh: Aligning data
+steps/train_mono.sh: Pass 7
+steps/train_mono.sh: Aligning data
+steps/train_mono.sh: Pass 8
+steps/train_mono.sh: Aligning data
+steps/train_mono.sh: Pass 9
+steps/train_mono.sh: Aligning data
+steps/train_mono.sh: Pass 10
+steps/train_mono.sh: Aligning data
+steps/train_mono.sh: Pass 11
+steps/train_mono.sh: Pass 12
+steps/train_mono.sh: Aligning data
+steps/train_mono.sh: Pass 13
+steps/train_mono.sh: Pass 14
+steps/train_mono.sh: Aligning data
+steps/train_mono.sh: Pass 15
+steps/train_mono.sh: Pass 16
+steps/train_mono.sh: Aligning data
+steps/train_mono.sh: Pass 17
+steps/train_mono.sh: Pass 18
+steps/train_mono.sh: Aligning data
+steps/train_mono.sh: Pass 19
+steps/train_mono.sh: Pass 20
+steps/train_mono.sh: Aligning data
+steps/train_mono.sh: Pass 21
+steps/train_mono.sh: Pass 22
+steps/train_mono.sh: Pass 23
+steps/train_mono.sh: Aligning data
+steps/train_mono.sh: Pass 24
+steps/train_mono.sh: Pass 25
+steps/train_mono.sh: Pass 26
+steps/train_mono.sh: Aligning data
+steps/train_mono.sh: Pass 27
+steps/train_mono.sh: Pass 28
+steps/train_mono.sh: Pass 29
+steps/train_mono.sh: Aligning data
+steps/train_mono.sh: Pass 30
+steps/train_mono.sh: Pass 31
+steps/train_mono.sh: Pass 32
+steps/train_mono.sh: Aligning data
+steps/train_mono.sh: Pass 33
+steps/train_mono.sh: Pass 34
+steps/train_mono.sh: Pass 35
+steps/train_mono.sh: Aligning data
+steps/train_mono.sh: Pass 36
+steps/train_mono.sh: Pass 37
+steps/train_mono.sh: Pass 38
+steps/train_mono.sh: Aligning data
+steps/train_mono.sh: Pass 39
+steps/diagnostic/analyze_alignments.sh --cmd run.pl --mem 2G data/lang exp/mono
+steps/diagnostic/analyze_alignments.sh: see stats in exp/mono/log/analyze_alignments.log
+1 warnings in exp/mono/log/acc.*.*.log
+117 warnings in exp/mono/log/update.*.log
+614 warnings in exp/mono/log/align.*.*.log
+exp/mono: nj=10 align prob=-82.04 over 9.94h [retry=0.0%, fail=0.0%] states=203 gauss=987
+steps/train_mono.sh: Done training monophone system in exp/mono
+tree-info exp/mono/tree 
+tree-info exp/mono/tree 
+fstpushspecial 
+fstminimizeencoded 
+fsttablecompose data/lang_test/L_disambig.fst data/lang_test/G.fst 
+fstdeterminizestar --use-log=true 
+fstisstochastic data/lang_test/tmp/LG.fst 
+-0.0654271 -0.0656417
+[info]: LG not stochastic.
+fstcomposecontext --context-size=1 --central-position=0 --read-disambig-syms=data/lang_test/phones/disambig.int --write-disambig-syms=data/lang_test/tmp/disambig_ilabels_1_0.int data/lang_test/tmp/ilabels_1_0.38264 data/lang_test/tmp/LG.fst 
+fstisstochastic data/lang_test/tmp/CLG_1_0.fst 
+-0.0654271 -0.0656417
+[info]: CLG not stochastic.
+make-h-transducer --disambig-syms-out=exp/mono/graph/disambig_tid.int --transition-scale=1.0 data/lang_test/tmp/ilabels_1_0 exp/mono/tree exp/mono/final.mdl 
+fsttablecompose exp/mono/graph/Ha.fst data/lang_test/tmp/CLG_1_0.fst 
+fstdeterminizestar --use-log=true 
+fstminimizeencoded 
+fstrmsymbols exp/mono/graph/disambig_tid.int 
+fstrmepslocal 
+fstisstochastic exp/mono/graph/HCLGa.fst 
+0.000268719 -0.130659
+HCLGa is not stochastic
+add-self-loops --self-loop-scale=0.1 --reorder=true exp/mono/final.mdl exp/mono/graph/HCLGa.fst 
+steps/decode.sh --cmd run.pl --mem 4G --config conf/decode.config --nj 10 exp/mono/graph data/dev exp/mono/decode_dev
+decode.sh: feature type is delta
+
+
+
+
+
+
+
+
+steps/train_deltas.sh: converting alignments from exp/tri1_ali to use current tree
+steps/train_deltas.sh: compiling graphs of transcripts
+steps/train_deltas.sh: training pass 1
+steps/train_deltas.sh: training pass 2
+steps/train_deltas.sh: training pass 3
+steps/train_deltas.sh: training pass 4
+steps/train_deltas.sh: training pass 5
+steps/train_deltas.sh: training pass 6
+steps/train_deltas.sh: training pass 7
+steps/train_deltas.sh: training pass 8
+steps/train_deltas.sh: training pass 9
+steps/train_deltas.sh: training pass 10
+steps/train_deltas.sh: aligning data
+steps/train_deltas.sh: training pass 11
+steps/train_deltas.sh: training pass 12
+steps/train_deltas.sh: training pass 13
+steps/train_deltas.sh: training pass 14
+steps/train_deltas.sh: training pass 15
+steps/train_deltas.sh: training pass 16
+steps/train_deltas.sh: training pass 17
+steps/train_deltas.sh: training pass 18
+steps/train_deltas.sh: training pass 19
+steps/train_deltas.sh: training pass 20
+steps/train_deltas.sh: aligning data
+steps/train_deltas.sh: training pass 21
+steps/train_deltas.sh: training pass 22
+steps/train_deltas.sh: training pass 23
+steps/train_deltas.sh: training pass 24
+steps/train_deltas.sh: training pass 25
+steps/train_deltas.sh: training pass 26
+steps/train_deltas.sh: training pass 27
+steps/train_deltas.sh: training pass 28
+steps/train_deltas.sh: training pass 29
+steps/train_deltas.sh: training pass 30
+steps/train_deltas.sh: aligning data
+steps/train_deltas.sh: training pass 31
+steps/train_deltas.sh: training pass 32
+steps/train_deltas.sh: training pass 33
+steps/train_deltas.sh: training pass 34
+steps/diagnostic/analyze_alignments.sh --cmd run.pl --mem 2G data/lang exp/tri2
+steps/diagnostic/analyze_alignments.sh: see stats in exp/tri2/log/analyze_alignments.log
+1 warnings in exp/tri2/log/build_tree.log
+3 warnings in exp/tri2/log/init_model.log
+1 warnings in exp/tri2/log/compile_questions.log
+35 warnings in exp/tri2/log/update.*.log
+15 warnings in exp/tri2/log/align.*.*.log
+exp/tri2: nj=10 align prob=-78.90 over 9.94h [retry=0.1%, fail=0.0%] states=2040 gauss=20025 tree-impr=4.93
+steps/train_deltas.sh: Done training system with delta+delta-delta features in exp/tri2
+tree-info exp/tri2/tree 
+tree-info exp/tri2/tree 
+make-h-transducer --disambig-syms-out=exp/tri2/graph/disambig_tid.int --transition-scale=1.0 data/lang_test/tmp/ilabels_3_1 exp/tri2/tree exp/tri2/final.mdl 
+fstrmepslocal 
+fsttablecompose exp/tri2/graph/Ha.fst data/lang_test/tmp/CLG_3_1.fst 
+fstminimizeencoded 
+fstrmsymbols exp/tri2/graph/disambig_tid.int 
+fstdeterminizestar --use-log=true 
+fstisstochastic exp/tri2/graph/HCLGa.fst 
+0.000486887 -0.185957
+HCLGa is not stochastic
+add-self-loops --self-loop-scale=0.1 --reorder=true exp/tri2/final.mdl exp/tri2/graph/HCLGa.fst 
+steps/decode.sh --cmd run.pl --mem 4G --config conf/decode.config --nj 10 exp/tri2/graph data/dev exp/tri2/decode_dev
+decode.sh: feature type is delta
+steps/diagnostic/analyze_lats.sh --cmd run.pl --mem 4G exp/tri2/graph exp/tri2/decode_dev
+steps/diagnostic/analyze_lats.sh: see stats in exp/tri2/decode_dev/log/analyze_alignments.log
+Overall, lattice depth (10,50,90-percentile)=(2,7,44) and mean=18.1
+steps/diagnostic/analyze_lats.sh: see stats in exp/tri2/decode_dev/log/analyze_lattice_depth_stats.log
++ steps/score_kaldi.sh --cmd 'run.pl --mem 4G' data/dev exp/tri2/graph exp/tri2/decode_dev
+steps/score_kaldi.sh --cmd run.pl --mem 4G data/dev exp/tri2/graph exp/tri2/decode_dev
+steps/score_kaldi.sh: scoring with word insertion penalty=0.0,0.5,1.0
++ steps/scoring/score_kaldi_cer.sh --stage 2 --cmd 'run.pl --mem 4G' data/dev exp/tri2/graph exp/tri2/decode_dev
+steps/scoring/score_kaldi_cer.sh --stage 2 --cmd run.pl --mem 4G data/dev exp/tri2/graph exp/tri2/decode_dev
+steps/scoring/score_kaldi_cer.sh: scoring with word insertion penalty=0.0,0.5,1.0
++ echo 'local/score.sh: Done'
+local/score.sh: Done
+steps/decode.sh --cmd run.pl --mem 4G --config conf/decode.config --nj 10 exp/tri2/graph data/test exp/tri2/decode_test
+decode.sh: feature type is delta
+steps/diagnostic/analyze_lats.sh --cmd run.pl --mem 4G exp/tri2/graph exp/tri2/decode_test
+steps/diagnostic/analyze_lats.sh: see stats in exp/tri2/decode_test/log/analyze_alignments.log
+Overall, lattice depth (10,50,90-percentile)=(2,9,56) and mean=22.7
+steps/diagnostic/analyze_lats.sh: see stats in exp/tri2/decode_test/log/analyze_lattice_depth_stats.log
++ steps/score_kaldi.sh --cmd 'run.pl --mem 4G' data/test exp/tri2/graph exp/tri2/decode_test
+steps/score_kaldi.sh --cmd run.pl --mem 4G data/test exp/tri2/graph exp/tri2/decode_test
+steps/score_kaldi.sh: scoring with word insertion penalty=0.0,0.5,1.0
++ steps/scoring/score_kaldi_cer.sh --stage 2 --cmd 'run.pl --mem 4G' data/test exp/tri2/graph exp/tri2/decode_test
+steps/scoring/score_kaldi_cer.sh --stage 2 --cmd run.pl --mem 4G data/test exp/tri2/graph exp/tri2/decode_test
+steps/scoring/score_kaldi_cer.sh: scoring with word insertion penalty=0.0,0.5,1.0
++ echo 'local/score.sh: Done'
+local/score.sh: Done
+steps/align_si.sh --cmd run.pl --mem 2G --nj 10 data/train data/lang exp/tri2 exp/tri2_ali
+steps/align_si.sh: feature type is delta
+steps/align_si.sh: aligning data in data/train using model from exp/tri2, putting alignments in exp/tri2_ali
+steps/diagnostic/analyze_alignments.sh --cmd run.pl --mem 2G data/lang exp/tri2_ali
+steps/diagnostic/analyze_alignments.sh: see stats in exp/tri2_ali/log/analyze_alignments.log
+steps/align_si.sh: done aligning data.
+steps/train_lda_mllt.sh --cmd run.pl --mem 2G 2500 20000 data/train data/lang exp/tri2_ali exp/tri3a
+steps/train_lda_mllt.sh: Accumulating LDA statistics.
+steps/train_lda_mllt.sh: Accumulating tree stats
+steps/train_lda_mllt.sh: Getting questions for tree clustering.
+steps/train_lda_mllt.sh: Building the tree
+steps/train_lda_mllt.sh: Initializing the model
+steps/train_lda_mllt.sh: Converting alignments from exp/tri2_ali to use current tree
+steps/train_lda_mllt.sh: Compiling graphs of transcripts
+Training pass 1
+Training pass 2
+steps/train_lda_mllt.sh: Estimating MLLT
+Training pass 3
+Training pass 4
+steps/train_lda_mllt.sh: Estimating MLLT
+Training pass 5
+Training pass 6
+steps/train_lda_mllt.sh: Estimating MLLT
+Training pass 7
+Training pass 8
+Training pass 9
+Training pass 10
+Aligning data
+Training pass 11
+Training pass 12
+steps/train_lda_mllt.sh: Estimating MLLT
+Training pass 13
+Training pass 14
+Training pass 15
+Training pass 16
+Training pass 17
+Training pass 18
+Training pass 19
+Training pass 20
+Aligning data
+Training pass 21
+Training pass 22
+Training pass 23
+Training pass 24
+Training pass 25
+Training pass 26
+Training pass 27
+Training pass 28
+Training pass 29
+Training pass 30
+Aligning data
+Training pass 31
+Training pass 32
+Training pass 33
+Training pass 34
+steps/diagnostic/analyze_alignments.sh --cmd run.pl --mem 2G data/lang exp/tri3a
+steps/diagnostic/analyze_alignments.sh: see stats in exp/tri3a/log/analyze_alignments.log
+3 warnings in exp/tri3a/log/init_model.log
+1 warnings in exp/tri3a/log/build_tree.log
+1 warnings in exp/tri3a/log/compile_questions.log
+18 warnings in exp/tri3a/log/align.*.*.log
+35 warnings in exp/tri3a/log/update.*.log
+exp/tri3a: nj=10 align prob=-48.23 over 9.94h [retry=0.0%, fail=0.0%] states=2048 gauss=20028 tree-impr=5.00 lda-sum=24.28 mllt:impr,logdet=0.92,1.45
+steps/train_lda_mllt.sh: Done training system with LDA+MLLT features in exp/tri3a
+tree-info exp/tri3a/tree 
+tree-info exp/tri3a/tree 
+make-h-transducer --disambig-syms-out=exp/tri3a/graph/disambig_tid.int --transition-scale=1.0 data/lang_test/tmp/ilabels_3_1 exp/tri3a/tree exp/tri3a/final.mdl 
+fstrmepslocal 
+fstrmsymbols exp/tri3a/graph/disambig_tid.int 
+fstminimizeencoded 
+fsttablecompose exp/tri3a/graph/Ha.fst data/lang_test/tmp/CLG_3_1.fst 
+fstdeterminizestar --use-log=true 
+fstisstochastic exp/tri3a/graph/HCLGa.fst 
+0.000486887 -0.18611
+HCLGa is not stochastic
+add-self-loops --self-loop-scale=0.1 --reorder=true exp/tri3a/final.mdl exp/tri3a/graph/HCLGa.fst 
+steps/decode.sh --cmd run.pl --mem 4G --nj 10 --config conf/decode.config exp/tri3a/graph data/dev exp/tri3a/decode_dev
+decode.sh: feature type is lda
+steps/diagnostic/analyze_lats.sh --cmd run.pl --mem 4G exp/tri3a/graph exp/tri3a/decode_dev
+steps/diagnostic/analyze_lats.sh: see stats in exp/tri3a/decode_dev/log/analyze_alignments.log
+Overall, lattice depth (10,50,90-percentile)=(1,6,35) and mean=14.5
+steps/diagnostic/analyze_lats.sh: see stats in exp/tri3a/decode_dev/log/analyze_lattice_depth_stats.log
++ steps/score_kaldi.sh --cmd 'run.pl --mem 4G' data/dev exp/tri3a/graph exp/tri3a/decode_dev
+steps/score_kaldi.sh --cmd run.pl --mem 4G data/dev exp/tri3a/graph exp/tri3a/decode_dev
+steps/score_kaldi.sh: scoring with word insertion penalty=0.0,0.5,1.0
++ steps/scoring/score_kaldi_cer.sh --stage 2 --cmd 'run.pl --mem 4G' data/dev exp/tri3a/graph exp/tri3a/decode_dev
+steps/scoring/score_kaldi_cer.sh --stage 2 --cmd run.pl --mem 4G data/dev exp/tri3a/graph exp/tri3a/decode_dev
+steps/scoring/score_kaldi_cer.sh: scoring with word insertion penalty=0.0,0.5,1.0
++ echo 'local/score.sh: Done'
+local/score.sh: Done
+steps/decode.sh --cmd run.pl --mem 4G --nj 10 --config conf/decode.config exp/tri3a/graph data/test exp/tri3a/decode_test
+decode.sh: feature type is lda
+steps/diagnostic/analyze_lats.sh --cmd run.pl --mem 4G exp/tri3a/graph exp/tri3a/decode_test
+steps/diagnostic/analyze_lats.sh: see stats in exp/tri3a/decode_test/log/analyze_alignments.log
+Overall, lattice depth (10,50,90-percentile)=(2,7,43) and mean=17.7
+steps/diagnostic/analyze_lats.sh: see stats in exp/tri3a/decode_test/log/analyze_lattice_depth_stats.log
++ steps/score_kaldi.sh --cmd 'run.pl --mem 4G' data/test exp/tri3a/graph exp/tri3a/decode_test
+steps/score_kaldi.sh --cmd run.pl --mem 4G data/test exp/tri3a/graph exp/tri3a/decode_test
+steps/score_kaldi.sh: scoring with word insertion penalty=0.0,0.5,1.0
++ steps/scoring/score_kaldi_cer.sh --stage 2 --cmd 'run.pl --mem 4G' data/test exp/tri3a/graph exp/tri3a/decode_test
+steps/scoring/score_kaldi_cer.sh --stage 2 --cmd run.pl --mem 4G data/test exp/tri3a/graph exp/tri3a/decode_test
+steps/scoring/score_kaldi_cer.sh: scoring with word insertion penalty=0.0,0.5,1.0
++ echo 'local/score.sh: Done'
+local/score.sh: Done
+steps/align_fmllr.sh --cmd run.pl --mem 2G --nj 10 data/train data/lang exp/tri3a exp/tri3a_ali
+steps/align_fmllr.sh: feature type is lda
+steps/align_fmllr.sh: compiling training graphs
+steps/align_fmllr.sh: aligning data in data/train using exp/tri3a/final.mdl and speaker-independent features.
+steps/align_fmllr.sh: computing fMLLR transforms
+steps/align_fmllr.sh: doing final alignment.
+steps/align_fmllr.sh: done aligning data.
+steps/diagnostic/analyze_alignments.sh --cmd run.pl --mem 2G data/lang exp/tri3a_ali
+steps/diagnostic/analyze_alignments.sh: see stats in exp/tri3a_ali/log/analyze_alignments.log
+1 warnings in exp/tri3a_ali/log/align_pass2.*.log
+3 warnings in exp/tri3a_ali/log/align_pass1.*.log
+steps/train_sat.sh --cmd run.pl --mem 2G 2500 20000 data/train data/lang exp/tri3a_ali exp/tri4a
+steps/train_sat.sh: feature type is lda
+steps/train_sat.sh: Using transforms from exp/tri3a_ali
+steps/train_sat.sh: Accumulating tree stats
+steps/train_sat.sh: Getting questions for tree clustering.
+steps/train_sat.sh: Building the tree
+steps/train_sat.sh: Initializing the model
+steps/train_sat.sh: Converting alignments from exp/tri3a_ali to use current tree
+steps/train_sat.sh: Compiling graphs of transcripts
+Pass 1
+Pass 2
+Estimating fMLLR transforms
+Pass 3
+Pass 4
+Estimating fMLLR transforms
+Pass 5
+Pass 6
+Estimating fMLLR transforms
+Pass 7
+Pass 8
+Pass 9
+Pass 10
+Aligning data
+Pass 11
+Pass 12
+Estimating fMLLR transforms
+Pass 13
+Pass 14
+Pass 15
+Pass 16
+Pass 17
+Pass 18
+Pass 19
+Pass 20
+Aligning data
+Pass 21
+Pass 22
+Pass 23
+Pass 24
+Pass 25
+Pass 26
+Pass 27
+Pass 28
+Pass 29
+Pass 30
+Aligning data
+Pass 31
+Pass 32
+Pass 33
+Pass 34
+steps/diagnostic/analyze_alignments.sh --cmd run.pl --mem 2G data/lang exp/tri4a
+steps/diagnostic/analyze_alignments.sh: see stats in exp/tri4a/log/analyze_alignments.log
+4 warnings in exp/tri4a/log/init_model.log
+1 warnings in exp/tri4a/log/build_tree.log
+1 warnings in exp/tri4a/log/compile_questions.log
+35 warnings in exp/tri4a/log/update.*.log
+1 warnings in exp/tri4a/log/est_alimdl.log
+15 warnings in exp/tri4a/log/align.*.*.log
+steps/train_sat.sh: Likelihood evolution:
+-49.1371 -48.948 -48.7836 -48.6599 -48.1903 -47.674 -47.3522 -47.1354 -46.9548 -46.53 -46.3388 -46.0682 -45.944 -45.8512 -45.7706 -45.6914 -45.6138 -45.5407 -45.4711 -45.3362 -45.242 -45.1817 -45.1262 -45.0749 -45.026 -44.979 -44.9335 -44.8878 -44.8399 -44.7613 -44.7025 -44.6787 -44.6639 -44.6534 
+exp/tri4a: nj=10 align prob=-47.85 over 9.94h [retry=0.1%, fail=0.0%] states=2136 gauss=20022 fmllr-impr=0.84 over 7.57h tree-impr=6.92
+steps/train_sat.sh: done training SAT system in exp/tri4a
+tree-info exp/tri4a/tree 
+tree-info exp/tri4a/tree 
+make-h-transducer --disambig-syms-out=exp/tri4a/graph/disambig_tid.int --transition-scale=1.0 data/lang_test/tmp/ilabels_3_1 exp/tri4a/tree exp/tri4a/final.mdl 
+fstrmepslocal 
+fsttablecompose exp/tri4a/graph/Ha.fst data/lang_test/tmp/CLG_3_1.fst 
+fstminimizeencoded 
+fstrmsymbols exp/tri4a/graph/disambig_tid.int 
+fstdeterminizestar --use-log=true 
+fstisstochastic exp/tri4a/graph/HCLGa.fst 
+0.000487099 -0.186021
+HCLGa is not stochastic
+add-self-loops --self-loop-scale=0.1 --reorder=true exp/tri4a/final.mdl exp/tri4a/graph/HCLGa.fst 
+steps/decode_fmllr.sh --cmd run.pl --mem 4G --nj 10 --config conf/decode.config exp/tri4a/graph data/dev exp/tri4a/decode_dev
+steps/decode.sh --scoring-opts  --num-threads 1 --skip-scoring false --acwt 0.083333 --nj 10 --cmd run.pl --mem 4G --beam 8.0 --model exp/tri4a/final.alimdl --max-active 2000 exp/tri4a/graph data/dev exp/tri4a/decode_dev.si
+decode.sh: feature type is lda
+steps/diagnostic/analyze_lats.sh --cmd run.pl --mem 4G exp/tri4a/graph exp/tri4a/decode_dev.si
+steps/diagnostic/analyze_lats.sh: see stats in exp/tri4a/decode_dev.si/log/analyze_alignments.log
+Overall, lattice depth (10,50,90-percentile)=(1,5,24) and mean=10.4
+steps/diagnostic/analyze_lats.sh: see stats in exp/tri4a/decode_dev.si/log/analyze_lattice_depth_stats.log
++ steps/score_kaldi.sh --cmd 'run.pl --mem 4G' data/dev exp/tri4a/graph exp/tri4a/decode_dev.si
+steps/score_kaldi.sh --cmd run.pl --mem 4G data/dev exp/tri4a/graph exp/tri4a/decode_dev.si
+steps/score_kaldi.sh: scoring with word insertion penalty=0.0,0.5,1.0
++ steps/scoring/score_kaldi_cer.sh --stage 2 --cmd 'run.pl --mem 4G' data/dev exp/tri4a/graph exp/tri4a/decode_dev.si
+steps/scoring/score_kaldi_cer.sh --stage 2 --cmd run.pl --mem 4G data/dev exp/tri4a/graph exp/tri4a/decode_dev.si
+steps/scoring/score_kaldi_cer.sh: scoring with word insertion penalty=0.0,0.5,1.0
++ echo 'local/score.sh: Done'
+local/score.sh: Done
+steps/decode_fmllr.sh: feature type is lda
+steps/decode_fmllr.sh: getting first-pass fMLLR transforms.
+steps/decode_fmllr.sh: doing main lattice generation phase
+steps/decode_fmllr.sh: estimating fMLLR transforms a second time.
+steps/decode_fmllr.sh: doing a final pass of acoustic rescoring.
+steps/diagnostic/analyze_lats.sh --cmd run.pl --mem 4G exp/tri4a/graph exp/tri4a/decode_dev
+steps/diagnostic/analyze_lats.sh: see stats in exp/tri4a/decode_dev/log/analyze_alignments.log
+Overall, lattice depth (10,50,90-percentile)=(1,4,24) and mean=10.1
+steps/diagnostic/analyze_lats.sh: see stats in exp/tri4a/decode_dev/log/analyze_lattice_depth_stats.log
++ steps/score_kaldi.sh --cmd 'run.pl --mem 4G' data/dev exp/tri4a/graph exp/tri4a/decode_dev
+steps/score_kaldi.sh --cmd run.pl --mem 4G data/dev exp/tri4a/graph exp/tri4a/decode_dev
+steps/score_kaldi.sh: scoring with word insertion penalty=0.0,0.5,1.0
++ steps/scoring/score_kaldi_cer.sh --stage 2 --cmd 'run.pl --mem 4G' data/dev exp/tri4a/graph exp/tri4a/decode_dev
+steps/scoring/score_kaldi_cer.sh --stage 2 --cmd run.pl --mem 4G data/dev exp/tri4a/graph exp/tri4a/decode_dev
+steps/scoring/score_kaldi_cer.sh: scoring with word insertion penalty=0.0,0.5,1.0
++ echo 'local/score.sh: Done'
+local/score.sh: Done
+steps/decode_fmllr.sh --cmd run.pl --mem 4G --nj 10 --config conf/decode.config exp/tri4a/graph data/test exp/tri4a/decode_test
+steps/decode.sh --scoring-opts  --num-threads 1 --skip-scoring false --acwt 0.083333 --nj 10 --cmd run.pl --mem 4G --beam 8.0 --model exp/tri4a/final.alimdl --max-active 2000 exp/tri4a/graph data/test exp/tri4a/decode_test.si
+decode.sh: feature type is lda
+steps/diagnostic/analyze_lats.sh --cmd run.pl --mem 4G exp/tri4a/graph exp/tri4a/decode_test.si
+steps/diagnostic/analyze_lats.sh: see stats in exp/tri4a/decode_test.si/log/analyze_alignments.log
+Overall, lattice depth (10,50,90-percentile)=(2,6,29) and mean=12.4
+steps/diagnostic/analyze_lats.sh: see stats in exp/tri4a/decode_test.si/log/analyze_lattice_depth_stats.log
++ steps/score_kaldi.sh --cmd 'run.pl --mem 4G' data/test exp/tri4a/graph exp/tri4a/decode_test.si
+steps/score_kaldi.sh --cmd run.pl --mem 4G data/test exp/tri4a/graph exp/tri4a/decode_test.si
+steps/score_kaldi.sh: scoring with word insertion penalty=0.0,0.5,1.0
++ steps/scoring/score_kaldi_cer.sh --stage 2 --cmd 'run.pl --mem 4G' data/test exp/tri4a/graph exp/tri4a/decode_test.si
+steps/scoring/score_kaldi_cer.sh --stage 2 --cmd run.pl --mem 4G data/test exp/tri4a/graph exp/tri4a/decode_test.si
+steps/scoring/score_kaldi_cer.sh: scoring with word insertion penalty=0.0,0.5,1.0
++ echo 'local/score.sh: Done'
+local/score.sh: Done
+steps/decode_fmllr.sh: feature type is lda
+steps/decode_fmllr.sh: getting first-pass fMLLR transforms.
+steps/decode_fmllr.sh: doing main lattice generation phase
+steps/decode_fmllr.sh: estimating fMLLR transforms a second time.
+steps/decode_fmllr.sh: doing a final pass of acoustic rescoring.
+steps/diagnostic/analyze_lats.sh --cmd run.pl --mem 4G exp/tri4a/graph exp/tri4a/decode_test
+steps/diagnostic/analyze_lats.sh: see stats in exp/tri4a/decode_test/log/analyze_alignments.log
+Overall, lattice depth (10,50,90-percentile)=(1,5,28) and mean=11.9
+steps/diagnostic/analyze_lats.sh: see stats in exp/tri4a/decode_test/log/analyze_lattice_depth_stats.log
++ steps/score_kaldi.sh --cmd 'run.pl --mem 4G' data/test exp/tri4a/graph exp/tri4a/decode_test
+steps/score_kaldi.sh --cmd run.pl --mem 4G data/test exp/tri4a/graph exp/tri4a/decode_test
+steps/score_kaldi.sh: scoring with word insertion penalty=0.0,0.5,1.0
++ steps/scoring/score_kaldi_cer.sh --stage 2 --cmd 'run.pl --mem 4G' data/test exp/tri4a/graph exp/tri4a/decode_test
+steps/scoring/score_kaldi_cer.sh --stage 2 --cmd run.pl --mem 4G data/test exp/tri4a/graph exp/tri4a/decode_test
+steps/scoring/score_kaldi_cer.sh: scoring with word insertion penalty=0.0,0.5,1.0
++ echo 'local/score.sh: Done'
+local/score.sh: Done
+steps/align_fmllr.sh --cmd run.pl --mem 2G --nj 10 data/train data/lang exp/tri4a exp/tri4a_ali
+steps/align_fmllr.sh: feature type is lda
+steps/align_fmllr.sh: compiling training graphs
+steps/align_fmllr.sh: aligning data in data/train using exp/tri4a/final.alimdl and speaker-independent features.
+steps/align_fmllr.sh: computing fMLLR transforms
+steps/align_fmllr.sh: doing final alignment.
+steps/align_fmllr.sh: done aligning data.
+steps/diagnostic/analyze_alignments.sh --cmd run.pl --mem 2G data/lang exp/tri4a_ali
+steps/diagnostic/analyze_alignments.sh: see stats in exp/tri4a_ali/log/analyze_alignments.log
+4 warnings in exp/tri4a_ali/log/align_pass2.*.log
+2 warnings in exp/tri4a_ali/log/align_pass1.*.log
+steps/train_sat.sh --cmd run.pl --mem 2G 3500 100000 data/train data/lang exp/tri4a_ali exp/tri5a
+steps/train_sat.sh: feature type is lda
+steps/train_sat.sh: Using transforms from exp/tri4a_ali
+steps/train_sat.sh: Accumulating tree stats
+steps/train_sat.sh: Getting questions for tree clustering.
+steps/train_sat.sh: Building the tree
+steps/train_sat.sh: Initializing the model
+steps/train_sat.sh: Converting alignments from exp/tri4a_ali to use current tree
+steps/train_sat.sh: Compiling graphs of transcripts
+Pass 1
+Pass 2
+Estimating fMLLR transforms
+Pass 3
+Pass 4
+Estimating fMLLR transforms
+Pass 5
+Pass 6
+Estimating fMLLR transforms
+Pass 7
+Pass 8
+Pass 9
+Pass 10
+Aligning data
+Pass 11
+Pass 12
+Estimating fMLLR transforms
+Pass 13
+Pass 14
+Pass 15
+Pass 16
+Pass 17
+Pass 18
+Pass 19
+Pass 20
+Aligning data
+Pass 21
+Pass 22
+Pass 23
+Pass 24
+Pass 25
+Pass 26
+Pass 27
+Pass 28
+Pass 29
+Pass 30
+Aligning data
+Pass 31
+Pass 32
+Pass 33
+Pass 34
+steps/diagnostic/analyze_alignments.sh --cmd run.pl --mem 2G data/lang exp/tri5a
+steps/diagnostic/analyze_alignments.sh: see stats in exp/tri5a/log/analyze_alignments.log
+16 warnings in exp/tri5a/log/init_model.log
+1 warnings in exp/tri5a/log/build_tree.log
+26 warnings in exp/tri5a/log/est_alimdl.log
+1 warnings in exp/tri5a/log/compile_questions.log
+701 warnings in exp/tri5a/log/update.*.log
+4 warnings in exp/tri5a/log/align.*.*.log
+steps/train_sat.sh: Likelihood evolution:
+-48.2852 -48.346 -48.2938 -48.1162 -47.5215 -46.7388 -46.1518 -45.7332 -45.3952 -45.0104 -44.7352 -44.3303 -44.1026 -43.9113 -43.73 -43.5593 -43.3964 -43.24 -43.0887 -42.8982 -42.7157 -42.5742 -42.4366 -42.3018 -42.1706 -42.0417 -41.9138 -41.7876 -41.6625 -41.5361 -41.4451 -41.4087 -41.3831 -41.3623 
+exp/tri5a: nj=10 align prob=-44.83 over 9.94h [retry=0.0%, fail=0.0%] states=2976 gauss=100132 fmllr-impr=0.33 over 7.63h tree-impr=7.65
+steps/train_sat.sh: done training SAT system in exp/tri5a
+tree-info exp/tri5a/tree 
+tree-info exp/tri5a/tree 
+make-h-transducer --disambig-syms-out=exp/tri5a/graph/disambig_tid.int --transition-scale=1.0 data/lang_test/tmp/ilabels_3_1 exp/tri5a/tree exp/tri5a/final.mdl 
+fstrmepslocal 
+fsttablecompose exp/tri5a/graph/Ha.fst data/lang_test/tmp/CLG_3_1.fst 
+fstrmsymbols exp/tri5a/graph/disambig_tid.int 
+fstminimizeencoded 
+fstdeterminizestar --use-log=true 
+fstisstochastic exp/tri5a/graph/HCLGa.fst 
+0.000482477 -0.185945
+HCLGa is not stochastic
+add-self-loops --self-loop-scale=0.1 --reorder=true exp/tri5a/final.mdl exp/tri5a/graph/HCLGa.fst 
+steps/decode_fmllr.sh --cmd run.pl --mem 4G --nj 10 --config conf/decode.config exp/tri5a/graph data/dev exp/tri5a/decode_dev
+steps/decode.sh --scoring-opts  --num-threads 1 --skip-scoring false --acwt 0.083333 --nj 10 --cmd run.pl --mem 4G --beam 8.0 --model exp/tri5a/final.alimdl --max-active 2000 exp/tri5a/graph data/dev exp/tri5a/decode_dev.si
+decode.sh: feature type is lda
+steps/diagnostic/analyze_lats.sh --cmd run.pl --mem 4G exp/tri5a/graph exp/tri5a/decode_dev.si
+steps/diagnostic/analyze_lats.sh: see stats in exp/tri5a/decode_dev.si/log/analyze_alignments.log
+Overall, lattice depth (10,50,90-percentile)=(1,5,20) and mean=8.7
+steps/diagnostic/analyze_lats.sh: see stats in exp/tri5a/decode_dev.si/log/analyze_lattice_depth_stats.log
++ steps/score_kaldi.sh --cmd 'run.pl --mem 4G' data/dev exp/tri5a/graph exp/tri5a/decode_dev.si
+steps/score_kaldi.sh --cmd run.pl --mem 4G data/dev exp/tri5a/graph exp/tri5a/decode_dev.si
+steps/score_kaldi.sh: scoring with word insertion penalty=0.0,0.5,1.0
++ steps/scoring/score_kaldi_cer.sh --stage 2 --cmd 'run.pl --mem 4G' data/dev exp/tri5a/graph exp/tri5a/decode_dev.si
+steps/scoring/score_kaldi_cer.sh --stage 2 --cmd run.pl --mem 4G data/dev exp/tri5a/graph exp/tri5a/decode_dev.si
+steps/scoring/score_kaldi_cer.sh: scoring with word insertion penalty=0.0,0.5,1.0
++ echo 'local/score.sh: Done'
+local/score.sh: Done
+steps/decode_fmllr.sh: feature type is lda
+steps/decode_fmllr.sh: getting first-pass fMLLR transforms.
+steps/decode_fmllr.sh: doing main lattice generation phase
+steps/decode_fmllr.sh: estimating fMLLR transforms a second time.
+steps/decode_fmllr.sh: doing a final pass of acoustic rescoring.
+steps/diagnostic/analyze_lats.sh --cmd run.pl --mem 4G exp/tri5a/graph exp/tri5a/decode_dev
+steps/diagnostic/analyze_lats.sh: see stats in exp/tri5a/decode_dev/log/analyze_alignments.log
+Overall, lattice depth (10,50,90-percentile)=(1,4,22) and mean=9.2
+steps/diagnostic/analyze_lats.sh: see stats in exp/tri5a/decode_dev/log/analyze_lattice_depth_stats.log
++ steps/score_kaldi.sh --cmd 'run.pl --mem 4G' data/dev exp/tri5a/graph exp/tri5a/decode_dev
+steps/score_kaldi.sh --cmd run.pl --mem 4G data/dev exp/tri5a/graph exp/tri5a/decode_dev
+steps/score_kaldi.sh: scoring with word insertion penalty=0.0,0.5,1.0
++ steps/scoring/score_kaldi_cer.sh --stage 2 --cmd 'run.pl --mem 4G' data/dev exp/tri5a/graph exp/tri5a/decode_dev
+steps/scoring/score_kaldi_cer.sh --stage 2 --cmd run.pl --mem 4G data/dev exp/tri5a/graph exp/tri5a/decode_dev
+steps/scoring/score_kaldi_cer.sh: scoring with word insertion penalty=0.0,0.5,1.0
++ echo 'local/score.sh: Done'
+local/score.sh: Done
+steps/decode_fmllr.sh --cmd run.pl --mem 4G --nj 10 --config conf/decode.config exp/tri5a/graph data/test exp/tri5a/decode_test
+steps/decode.sh --scoring-opts  --num-threads 1 --skip-scoring false --acwt 0.083333 --nj 10 --cmd run.pl --mem 4G --beam 8.0 --model exp/tri5a/final.alimdl --max-active 2000 exp/tri5a/graph data/test exp/tri5a/decode_test.si
+decode.sh: feature type is lda
+steps/diagnostic/analyze_lats.sh --cmd run.pl --mem 4G exp/tri5a/graph exp/tri5a/decode_test.si
+steps/diagnostic/analyze_lats.sh: see stats in exp/tri5a/decode_test.si/log/analyze_alignments.log
+Overall, lattice depth (10,50,90-percentile)=(1,5,23) and mean=10.1
+steps/diagnostic/analyze_lats.sh: see stats in exp/tri5a/decode_test.si/log/analyze_lattice_depth_stats.log
++ steps/score_kaldi.sh --cmd 'run.pl --mem 4G' data/test exp/tri5a/graph exp/tri5a/decode_test.si
+steps/score_kaldi.sh --cmd run.pl --mem 4G data/test exp/tri5a/graph exp/tri5a/decode_test.si
+steps/score_kaldi.sh: scoring with word insertion penalty=0.0,0.5,1.0
++ steps/scoring/score_kaldi_cer.sh --stage 2 --cmd 'run.pl --mem 4G' data/test exp/tri5a/graph exp/tri5a/decode_test.si
+steps/scoring/score_kaldi_cer.sh --stage 2 --cmd run.pl --mem 4G data/test exp/tri5a/graph exp/tri5a/decode_test.si
+steps/scoring/score_kaldi_cer.sh: scoring with word insertion penalty=0.0,0.5,1.0
++ echo 'local/score.sh: Done'
+local/score.sh: Done
+steps/decode_fmllr.sh: feature type is lda
+steps/decode_fmllr.sh: getting first-pass fMLLR transforms.
+steps/decode_fmllr.sh: doing main lattice generation phase
+steps/decode_fmllr.sh: estimating fMLLR transforms a second time.
+steps/decode_fmllr.sh: doing a final pass of acoustic rescoring.
+steps/diagnostic/analyze_lats.sh --cmd run.pl --mem 4G exp/tri5a/graph exp/tri5a/decode_test
+steps/diagnostic/analyze_lats.sh: see stats in exp/tri5a/decode_test/log/analyze_alignments.log
+Overall, lattice depth (10,50,90-percentile)=(1,5,26) and mean=10.9
+steps/diagnostic/analyze_lats.sh: see stats in exp/tri5a/decode_test/log/analyze_lattice_depth_stats.log
++ steps/score_kaldi.sh --cmd 'run.pl --mem 4G' data/test exp/tri5a/graph exp/tri5a/decode_test
+steps/score_kaldi.sh --cmd run.pl --mem 4G data/test exp/tri5a/graph exp/tri5a/decode_test
+steps/score_kaldi.sh: scoring with word insertion penalty=0.0,0.5,1.0
++ steps/scoring/score_kaldi_cer.sh --stage 2 --cmd 'run.pl --mem 4G' data/test exp/tri5a/graph exp/tri5a/decode_test
+steps/scoring/score_kaldi_cer.sh --stage 2 --cmd run.pl --mem 4G data/test exp/tri5a/graph exp/tri5a/decode_test
+steps/scoring/score_kaldi_cer.sh: scoring with word insertion penalty=0.0,0.5,1.0
++ echo 'local/score.sh: Done'
+local/score.sh: Done
+steps/align_fmllr.sh --cmd run.pl --mem 2G --nj 10 data/train data/lang exp/tri5a exp/tri5a_ali
+steps/align_fmllr.sh: feature type is lda
+steps/align_fmllr.sh: compiling training graphs
+steps/align_fmllr.sh: aligning data in data/train using exp/tri5a/final.alimdl and speaker-independent features.
+steps/align_fmllr.sh: computing fMLLR transforms
+steps/align_fmllr.sh: doing final alignment.
+steps/align_fmllr.sh: done aligning data.
+steps/diagnostic/analyze_alignments.sh --cmd run.pl --mem 2G data/lang exp/tri5a_ali
+steps/diagnostic/analyze_alignments.sh: see stats in exp/tri5a_ali/log/analyze_alignments.log
+1 warnings in exp/tri5a_ali/log/align_pass2.*.log
+local/nnet3/run_ivector_common.sh: preparing directory for low-resolution speed-perturbed data (for alignment)
+fix_data_dir.sh: kept all 8000 utterances.
+fix_data_dir.sh: old files are kept in data/train/.backup
+utils/data/perturb_data_dir_speed_3way.sh: making sure the utt2dur and the reco2dur files are present
+... in data/train, because obtaining it after speed-perturbing
+... would be very slow, and you might need them.
+utils/data/get_utt2dur.sh: data/train/utt2dur already exists with the expected length.  We won't recompute it.
+utils/data/get_reco2dur.sh: data/train/wav.scp indexed by utt-id; copying utt2dur to reco2dur
+utils/data/perturb_data_dir_speed.sh: generated speed-perturbed version of data in data/train, in data/train_sp_speed0.9
+fix_data_dir.sh: kept all 8000 utterances.
+fix_data_dir.sh: old files are kept in data/train_sp_speed0.9/.backup
+utils/validate_data_dir.sh: Successfully validated data-directory data/train_sp_speed0.9
+utils/data/perturb_data_dir_speed.sh: generated speed-perturbed version of data in data/train, in data/train_sp_speed1.1
+fix_data_dir.sh: kept all 8000 utterances.
+fix_data_dir.sh: old files are kept in data/train_sp_speed1.1/.backup
+utils/validate_data_dir.sh: Successfully validated data-directory data/train_sp_speed1.1
+utils/data/combine_data.sh data/train_sp data/train data/train_sp_speed0.9 data/train_sp_speed1.1
+utils/data/combine_data.sh: combined utt2uniq
+utils/data/combine_data.sh [info]: not combining segments as it does not exist
+utils/data/combine_data.sh: combined utt2spk
+utils/data/combine_data.sh [info]: not combining utt2lang as it does not exist
+utils/data/combine_data.sh: combined utt2dur
+utils/data/combine_data.sh [info]: **not combining utt2num_frames as it does not exist everywhere**
+utils/data/combine_data.sh: combined reco2dur
+utils/data/combine_data.sh [info]: **not combining feats.scp as it does not exist everywhere**
+utils/data/combine_data.sh: combined text
+utils/data/combine_data.sh [info]: **not combining cmvn.scp as it does not exist everywhere**
+utils/data/combine_data.sh [info]: not combining vad.scp as it does not exist
+utils/data/combine_data.sh [info]: not combining reco2file_and_channel as it does not exist
+utils/data/combine_data.sh: combined wav.scp
+utils/data/combine_data.sh [info]: not combining spk2gender as it does not exist
+fix_data_dir.sh: kept all 24000 utterances.
+fix_data_dir.sh: old files are kept in data/train_sp/.backup
+utils/data/perturb_data_dir_speed_3way.sh: generated 3-way speed-perturbed version of data in data/train, in data/train_sp
+utils/validate_data_dir.sh: Successfully validated data-directory data/train_sp
+local/nnet3/run_ivector_common.sh: making MFCC features for low-resolution speed-perturbed data
+steps/make_mfcc_pitch.sh --cmd run.pl --mem 2G --nj 70 data/train_sp exp/make_mfcc/train_sp mfcc_perturbed
+utils/validate_data_dir.sh: Successfully validated data-directory data/train_sp
+steps/make_mfcc_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+steps/make_mfcc_pitch.sh: Succeeded creating MFCC and pitch features for train_sp
+steps/compute_cmvn_stats.sh data/train_sp exp/make_mfcc/train_sp mfcc_perturbed
+Succeeded creating CMVN stats for train_sp
+fix_data_dir.sh: kept all 24000 utterances.
+fix_data_dir.sh: old files are kept in data/train_sp/.backup
+local/nnet3/run_ivector_common.sh: aligning with the perturbed low-resolution data
+steps/align_fmllr.sh --nj 30 --cmd run.pl --mem 2G data/train_sp data/lang exp/tri5a exp/tri5a_sp_ali
+steps/align_fmllr.sh: feature type is lda
+steps/align_fmllr.sh: compiling training graphs
+steps/align_fmllr.sh: aligning data in data/train_sp using exp/tri5a/final.alimdl and speaker-independent features.
+steps/align_fmllr.sh: computing fMLLR transforms
+steps/align_fmllr.sh: doing final alignment.
+steps/align_fmllr.sh: done aligning data.
+steps/diagnostic/analyze_alignments.sh --cmd run.pl --mem 2G data/lang exp/tri5a_sp_ali
+steps/diagnostic/analyze_alignments.sh: see stats in exp/tri5a_sp_ali/log/analyze_alignments.log
+15 warnings in exp/tri5a_sp_ali/log/align_pass1.*.log
+4 warnings in exp/tri5a_sp_ali/log/align_pass2.*.log
+local/nnet3/run_ivector_common.sh: creating high-resolution MFCC features
+utils/copy_data_dir.sh: copied data from data/train_sp to data/train_sp_hires
+utils/validate_data_dir.sh: Successfully validated data-directory data/train_sp_hires
+utils/copy_data_dir.sh: copied data from data/dev to data/dev_hires
+utils/validate_data_dir.sh: Successfully validated data-directory data/dev_hires
+utils/copy_data_dir.sh: copied data from data/test to data/test_hires
+utils/validate_data_dir.sh: Successfully validated data-directory data/test_hires
+utils/data/perturb_data_dir_volume.sh: data/train_sp_hires/feats.scp exists; moving it to data/train_sp_hires/.backup/ as it wouldn't be valid any more.
+utils/data/perturb_data_dir_volume.sh: added volume perturbation to the data in data/train_sp_hires
+steps/make_mfcc_pitch.sh --nj 10 --mfcc-config conf/mfcc_hires.conf --cmd run.pl --mem 2G data/train_sp_hires exp/make_hires/train_sp mfcc_perturbed_hires
+utils/validate_data_dir.sh: Successfully validated data-directory data/train_sp_hires
+steps/make_mfcc_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+steps/make_mfcc_pitch.sh: Succeeded creating MFCC and pitch features for train_sp_hires
+steps/compute_cmvn_stats.sh data/train_sp_hires exp/make_hires/train_sp mfcc_perturbed_hires
+Succeeded creating CMVN stats for train_sp_hires
+fix_data_dir.sh: kept all 24000 utterances.
+fix_data_dir.sh: old files are kept in data/train_sp_hires/.backup
+utils/copy_data_dir.sh: copied data from data/train_sp_hires to data/train_sp_hires_nopitch
+utils/validate_data_dir.sh: Successfully validated data-directory data/train_sp_hires_nopitch
+utils/data/limit_feature_dim.sh: warning: removing data/train_sp_hires_nopitch/cmvn.cp, you will have to regenerate it from the features.
+utils/validate_data_dir.sh: Successfully validated data-directory data/train_sp_hires_nopitch
+steps/compute_cmvn_stats.sh data/train_sp_hires_nopitch exp/make_hires/train_sp mfcc_perturbed_hires
+Succeeded creating CMVN stats for train_sp_hires_nopitch
+steps/make_mfcc_pitch.sh --nj 10 --mfcc-config conf/mfcc_hires.conf --cmd run.pl --mem 2G data/dev_hires exp/make_hires/dev mfcc_perturbed_hires
+steps/make_mfcc_pitch.sh: moving data/dev_hires/feats.scp to data/dev_hires/.backup
+utils/validate_data_dir.sh: Successfully validated data-directory data/dev_hires
+steps/make_mfcc_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+steps/make_mfcc_pitch.sh: Succeeded creating MFCC and pitch features for dev_hires
+steps/compute_cmvn_stats.sh data/dev_hires exp/make_hires/dev mfcc_perturbed_hires
+Succeeded creating CMVN stats for dev_hires
+fix_data_dir.sh: kept all 14326 utterances.
+fix_data_dir.sh: old files are kept in data/dev_hires/.backup
+utils/copy_data_dir.sh: copied data from data/dev_hires to data/dev_hires_nopitch
+utils/validate_data_dir.sh: Successfully validated data-directory data/dev_hires_nopitch
+utils/data/limit_feature_dim.sh: warning: removing data/dev_hires_nopitch/cmvn.cp, you will have to regenerate it from the features.
+utils/validate_data_dir.sh: Successfully validated data-directory data/dev_hires_nopitch
+steps/compute_cmvn_stats.sh data/dev_hires_nopitch exp/make_hires/dev mfcc_perturbed_hires
+Succeeded creating CMVN stats for dev_hires_nopitch
+steps/make_mfcc_pitch.sh --nj 10 --mfcc-config conf/mfcc_hires.conf --cmd run.pl --mem 2G data/test_hires exp/make_hires/test mfcc_perturbed_hires
+steps/make_mfcc_pitch.sh: moving data/test_hires/feats.scp to data/test_hires/.backup
+utils/validate_data_dir.sh: Successfully validated data-directory data/test_hires
+steps/make_mfcc_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+steps/make_mfcc_pitch.sh: Succeeded creating MFCC and pitch features for test_hires
+steps/compute_cmvn_stats.sh data/test_hires exp/make_hires/test mfcc_perturbed_hires
+Succeeded creating CMVN stats for test_hires
+fix_data_dir.sh: kept all 7176 utterances.
+fix_data_dir.sh: old files are kept in data/test_hires/.backup
+utils/copy_data_dir.sh: copied data from data/test_hires to data/test_hires_nopitch
+utils/validate_data_dir.sh: Successfully validated data-directory data/test_hires_nopitch
+utils/data/limit_feature_dim.sh: warning: removing data/test_hires_nopitch/cmvn.cp, you will have to regenerate it from the features.
+utils/validate_data_dir.sh: Successfully validated data-directory data/test_hires_nopitch
+steps/compute_cmvn_stats.sh data/test_hires_nopitch exp/make_hires/test mfcc_perturbed_hires
+Succeeded creating CMVN stats for test_hires_nopitch
+local/nnet3/run_tdnn.sh: creating neural net configs
+tree-info exp/tri5a_sp_ali/tree 
+steps/nnet3/xconfig_to_configs.py --xconfig-file exp/nnet3/new_dnn_sp/configs/network.xconfig --config-dir exp/nnet3/new_dnn_sp/configs/
+nnet3-init exp/nnet3/new_dnn_sp/configs//init.config exp/nnet3/new_dnn_sp/configs//init.raw 
+LOG (nnet3-init[5.5.1020~1-501de]:main():nnet3-init.cc:80) Initialized raw neural net and wrote it to exp/nnet3/new_dnn_sp/configs//init.raw
+nnet3-info exp/nnet3/new_dnn_sp/configs//init.raw 
+nnet3-init exp/nnet3/new_dnn_sp/configs//ref.config exp/nnet3/new_dnn_sp/configs//ref.raw 
+LOG (nnet3-init[5.5.1020~1-501de]:main():nnet3-init.cc:80) Initialized raw neural net and wrote it to exp/nnet3/new_dnn_sp/configs//ref.raw
+nnet3-info exp/nnet3/new_dnn_sp/configs//ref.raw 
+nnet3-init exp/nnet3/new_dnn_sp/configs//ref.config exp/nnet3/new_dnn_sp/configs//ref.raw 
+LOG (nnet3-init[5.5.1020~1-501de]:main():nnet3-init.cc:80) Initialized raw neural net and wrote it to exp/nnet3/new_dnn_sp/configs//ref.raw
+nnet3-info exp/nnet3/new_dnn_sp/configs//ref.raw 
+2022-05-21 14:09:33,714 [steps/nnet3/train_dnn.py:36 - <module> - INFO ] Starting DNN trainer (train_dnn.py)
+steps/nnet3/train_dnn.py --stage=-10 --cmd=run.pl --mem 4G --feat.cmvn-opts=--norm-means=false --norm-vars=false --trainer.num-epochs 4 --trainer.optimization.num-jobs-initial 6 --trainer.optimization.num-jobs-final 6 --trainer.optimization.initial-effective-lrate 0.0015 --trainer.optimization.final-effective-lrate 0.00015 --egs.dir  --cleanup.remove-egs true --cleanup.preserve-model-interval 500 --use-gpu true --trainer.optimization.minibatch-size 128 --feat-dir=data/train_sp_hires --ali-dir exp/tri5a_sp_ali --lang data/lang --dir=exp/nnet3/new_dnn_sp
+['steps/nnet3/train_dnn.py', '--stage=-10', '--cmd=run.pl --mem 4G', '--feat.cmvn-opts=--norm-means=false --norm-vars=false', '--trainer.num-epochs', '4', '--trainer.optimization.num-jobs-initial', '6', '--trainer.optimization.num-jobs-final', '6', '--trainer.optimization.initial-effective-lrate', '0.0015', '--trainer.optimization.final-effective-lrate', '0.00015', '--egs.dir', '', '--cleanup.remove-egs', 'true', '--cleanup.preserve-model-interval', '500', '--use-gpu', 'true', '--trainer.optimization.minibatch-size', '128', '--feat-dir=data/train_sp_hires', '--ali-dir', 'exp/tri5a_sp_ali', '--lang', 'data/lang', '--dir=exp/nnet3/new_dnn_sp']
+2022-05-21 14:09:33,718 [steps/nnet3/train_dnn.py:178 - train - INFO ] Arguments for the experiment
+{'ali_dir': 'exp/tri5a_sp_ali',
+ 'backstitch_training_interval': 1,
+ 'backstitch_training_scale': 0.0,
+ 'cleanup': True,
+ 'cmvn_opts': '--norm-means=false --norm-vars=false',
+ 'combine_sum_to_one_penalty': 0.0,
+ 'command': 'run.pl --mem 4G',
+ 'compute_per_dim_accuracy': False,
+ 'dir': 'exp/nnet3/new_dnn_sp',
+ 'do_final_combination': True,
+ 'dropout_schedule': None,
+ 'egs_command': None,
+ 'egs_dir': None,
+ 'egs_opts': None,
+ 'egs_stage': 0,
+ 'email': None,
+ 'exit_stage': None,
+ 'feat_dir': 'data/train_sp_hires',
+ 'final_effective_lrate': 0.00015,
+ 'frames_per_eg': 8,
+ 'initial_effective_lrate': 0.0015,
+ 'input_model': None,
+ 'lang': 'data/lang',
+ 'max_lda_jobs': 10,
+ 'max_models_combine': 20,
+ 'max_objective_evaluations': 30,
+ 'max_param_change': 2.0,
+ 'minibatch_size': '128',
+ 'momentum': 0.0,
+ 'num_epochs': 4.0,
+ 'num_jobs_compute_prior': 10,
+ 'num_jobs_final': 6,
+ 'num_jobs_initial': 6,
+ 'num_jobs_step': 1,
+ 'online_ivector_dir': None,
+ 'preserve_model_interval': 500,
+ 'presoftmax_prior_scale_power': -0.25,
+ 'prior_subset_size': 20000,
+ 'proportional_shrink': 0.0,
+ 'rand_prune': 4.0,
+ 'remove_egs': True,
+ 'reporting_interval': 0.1,
+ 'samples_per_iter': 400000,
+ 'shuffle_buffer_size': 5000,
+ 'srand': 0,
+ 'stage': -10,
+ 'train_opts': [],
+ 'use_gpu': 'yes'}
+2022-05-21 14:09:34,200 [steps/nnet3/train_dnn.py:228 - train - INFO ] Initializing a basic network for estimating preconditioning matrix
+2022-05-21 14:09:34,254 [steps/nnet3/train_dnn.py:238 - train - INFO ] Generating egs
+steps/nnet3/get_egs.sh --cmd run.pl --mem 4G --cmvn-opts --norm-means=false --norm-vars=false --online-ivector-dir  --left-context 10 --right-context 10 --left-context-initial -1 --right-context-final -1 --stage 0 --samples-per-iter 400000 --frames-per-eg 8 --srand 0 data/train_sp_hires exp/tri5a_sp_ali exp/nnet3/new_dnn_sp/egs
+File data/train_sp_hires/utt2uniq exists, so augmenting valid_uttlist to
+include all perturbed versions of the same 'real' utterances.
+steps/nnet3/get_egs.sh: creating egs.  To ensure they are not deleted later you can do:  touch exp/nnet3/new_dnn_sp/egs/.nodelete
+steps/nnet3/get_egs.sh: feature type is raw, with 'apply-cmvn'
+steps/nnet3/get_egs.sh: working out number of frames of training data
+steps/nnet3/get_egs.sh: working out feature dim
+steps/nnet3/get_egs.sh: creating 4 archives, each with 339252 egs, with
+steps/nnet3/get_egs.sh:   8 labels per example, and (left,right) context = (10,10)
+steps/nnet3/get_egs.sh: copying data alignments
+copy-int-vector ark:- ark,scp:exp/nnet3/new_dnn_sp/egs/ali.ark,exp/nnet3/new_dnn_sp/egs/ali.scp 
+LOG (copy-int-vector[5.5.1020~1-501de]:main():copy-int-vector.cc:83) Copied 24000 vectors of int32.
+steps/nnet3/get_egs.sh: Getting validation and training subset examples.
+steps/nnet3/get_egs.sh: ... extracting validation and training-subset alignments.
+... Getting subsets of validation examples for diagnostics and combination.
+steps/nnet3/get_egs.sh: Generating training examples on disk
+steps/nnet3/get_egs.sh: recombining and shuffling order of archives on disk
+steps/nnet3/get_egs.sh: removing temporary archives
+steps/nnet3/get_egs.sh: removing temporary alignments
+steps/nnet3/get_egs.sh: Finished preparing training examples
+Traceback (most recent call last):
+  File "steps/nnet3/train_dnn.py", line 459, in main
+    train(args, run_opts)
+  File "steps/nnet3/train_dnn.py", line 268, in train
+    raise Exception('num_jobs_final cannot exceed the number of archives '
+Exception: num_jobs_final cannot exceed the number of archives in the egs directory
+local/chain/run_tdnn.sh 
+local/nnet3/run_ivector_common.sh: preparing directory for low-resolution speed-perturbed data (for alignment)
+utils/data/perturb_data_dir_speed_3way.sh: data/train_sp/feats.scp already exists: refusing to run this (please delete data/train_sp/feats.scp if you want this to run)
+%WER 45.83 [ 48014 / 104765, 939 ins, 2821 del, 44254 sub ] exp/mono/decode_test/cer_10_0.0
+%WER 28.77 [ 30143 / 104765, 1199 ins, 1515 del, 27429 sub ] exp/tri1/decode_test/cer_14_0.5
+%WER 28.59 [ 29953 / 104765, 1384 ins, 1333 del, 27236 sub ] exp/tri2/decode_test/cer_13_0.5
+%WER 25.81 [ 27041 / 104765, 1012 ins, 1345 del, 24684 sub ] exp/tri3a/decode_test/cer_14_0.5
+%WER 20.49 [ 21465 / 104765, 912 ins, 847 del, 19706 sub ] exp/tri4a/decode_test/cer_13_0.5
+%WER 22.28 [ 23345 / 104765, 953 ins, 1223 del, 21169 sub ] exp/tri5a/decode_test/cer_17_1.0
+(base) bluixe@wenhao-ubuntu:~/Project/kaldi/egs/aishell/s5$ ./run.sh
+local/nnet3/run_ivector_common.sh: preparing directory for low-resolution speed-perturbed data (for alignment)
+utils/data/perturb_data_dir_speed_3way.sh: data/train_sp/feats.scp already exists: refusing to run this (please delete data/train_sp/feats.scp if you want this to run)
+local/chain/run_tdnn.sh 
+local/nnet3/run_ivector_common.sh: preparing directory for low-resolution speed-perturbed data (for alignment)
+utils/data/perturb_data_dir_speed_3way.sh: data/train_sp/feats.scp already exists: refusing to run this (please delete data/train_sp/feats.scp if you want this to run)
+%WER 45.83 [ 48014 / 104765, 939 ins, 2821 del, 44254 sub ] exp/mono/decode_test/cer_10_0.0
+%WER 28.77 [ 30143 / 104765, 1199 ins, 1515 del, 27429 sub ] exp/tri1/decode_test/cer_14_0.5
+%WER 28.59 [ 29953 / 104765, 1384 ins, 1333 del, 27236 sub ] exp/tri2/decode_test/cer_13_0.5
+%WER 25.81 [ 27041 / 104765, 1012 ins, 1345 del, 24684 sub ] exp/tri3a/decode_test/cer_14_0.5
+%WER 20.49 [ 21465 / 104765, 912 ins, 847 del, 19706 sub ] exp/tri4a/decode_test/cer_13_0.5
+%WER 22.28 [ 23345 / 104765, 953 ins, 1223 del, 21169 sub ] exp/tri5a/decode_test/cer_17_1.0
+(base) bluixe@wenhao-ubuntu:~/Project/kaldi/egs/aishell/s5$ ./run.sh
+local/nnet3/run_ivector_common.sh: preparing directory for low-resolution speed-perturbed data (for alignment)
+fix_data_dir.sh: kept all 8000 utterances.
+fix_data_dir.sh: old files are kept in data/train/.backup
+utils/data/perturb_data_dir_speed_3way.sh: making sure the utt2dur and the reco2dur files are present
+... in data/train, because obtaining it after speed-perturbing
+... would be very slow, and you might need them.
+utils/data/get_utt2dur.sh: data/train/utt2dur already exists with the expected length.  We won't recompute it.
+utils/data/get_reco2dur.sh: data/train/reco2dur already exists with the expected length.  We won't recompute it.
+utils/data/perturb_data_dir_speed.sh: generated speed-perturbed version of data in data/train, in data/train_sp_speed0.9
+fix_data_dir.sh: kept all 8000 utterances.
+fix_data_dir.sh: old files are kept in data/train_sp_speed0.9/.backup
+utils/validate_data_dir.sh: Successfully validated data-directory data/train_sp_speed0.9
+utils/data/perturb_data_dir_speed.sh: generated speed-perturbed version of data in data/train, in data/train_sp_speed1.1
+fix_data_dir.sh: kept all 8000 utterances.
+fix_data_dir.sh: old files are kept in data/train_sp_speed1.1/.backup
+utils/validate_data_dir.sh: Successfully validated data-directory data/train_sp_speed1.1
+utils/data/combine_data.sh data/train_sp data/train data/train_sp_speed0.9 data/train_sp_speed1.1
+utils/data/combine_data.sh: combined utt2uniq
+utils/data/combine_data.sh [info]: not combining segments as it does not exist
+utils/data/combine_data.sh: combined utt2spk
+utils/data/combine_data.sh [info]: not combining utt2lang as it does not exist
+utils/data/combine_data.sh: combined utt2dur
+utils/data/combine_data.sh [info]: **not combining utt2num_frames as it does not exist everywhere**
+utils/data/combine_data.sh: combined reco2dur
+utils/data/combine_data.sh [info]: **not combining feats.scp as it does not exist everywhere**
+utils/data/combine_data.sh: combined text
+utils/data/combine_data.sh [info]: **not combining cmvn.scp as it does not exist everywhere**
+utils/data/combine_data.sh [info]: not combining vad.scp as it does not exist
+utils/data/combine_data.sh [info]: not combining reco2file_and_channel as it does not exist
+utils/data/combine_data.sh: combined wav.scp
+utils/data/combine_data.sh [info]: not combining spk2gender as it does not exist
+fix_data_dir.sh: kept all 24000 utterances.
+fix_data_dir.sh: old files are kept in data/train_sp/.backup
+utils/data/perturb_data_dir_speed_3way.sh: generated 3-way speed-perturbed version of data in data/train, in data/train_sp
+utils/validate_data_dir.sh: Successfully validated data-directory data/train_sp
+local/nnet3/run_ivector_common.sh: making MFCC features for low-resolution speed-perturbed data
+steps/make_mfcc_pitch.sh --cmd run.pl --mem 2G --nj 70 data/train_sp exp/make_mfcc/train_sp mfcc_perturbed
+utils/validate_data_dir.sh: Successfully validated data-directory data/train_sp
+steps/make_mfcc_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+steps/make_mfcc_pitch.sh: Succeeded creating MFCC and pitch features for train_sp
+steps/compute_cmvn_stats.sh data/train_sp exp/make_mfcc/train_sp mfcc_perturbed
+Succeeded creating CMVN stats for train_sp
+fix_data_dir.sh: kept all 24000 utterances.
+fix_data_dir.sh: old files are kept in data/train_sp/.backup
+local/nnet3/run_ivector_common.sh: aligning with the perturbed low-resolution data
+steps/align_fmllr.sh --nj 30 --cmd run.pl --mem 2G data/train_sp data/lang exp/tri5a exp/tri5a_sp_ali
+steps/align_fmllr.sh: feature type is lda
+steps/align_fmllr.sh: compiling training graphs
+steps/align_fmllr.sh: aligning data in data/train_sp using exp/tri5a/final.alimdl and speaker-independent features.
+steps/align_fmllr.sh: computing fMLLR transforms
+steps/align_fmllr.sh: doing final alignment.
+steps/align_fmllr.sh: done aligning data.
+steps/diagnostic/analyze_alignments.sh --cmd run.pl --mem 2G data/lang exp/tri5a_sp_ali
+steps/diagnostic/analyze_alignments.sh: see stats in exp/tri5a_sp_ali/log/analyze_alignments.log
+16 warnings in exp/tri5a_sp_ali/log/align_pass1.*.log
+4 warnings in exp/tri5a_sp_ali/log/align_pass2.*.log
+local/nnet3/run_ivector_common.sh: creating high-resolution MFCC features
+utils/copy_data_dir.sh: copied data from data/train_sp to data/train_sp_hires
+utils/validate_data_dir.sh: Successfully validated data-directory data/train_sp_hires
+utils/copy_data_dir.sh: copied data from data/dev to data/dev_hires
+utils/validate_data_dir.sh: Successfully validated data-directory data/dev_hires
+utils/copy_data_dir.sh: copied data from data/test to data/test_hires
+utils/validate_data_dir.sh: Successfully validated data-directory data/test_hires
+utils/data/perturb_data_dir_volume.sh: data/train_sp_hires/feats.scp exists; moving it to data/train_sp_hires/.backup/ as it wouldn't be valid any more.
+utils/data/perturb_data_dir_volume.sh: added volume perturbation to the data in data/train_sp_hires
+steps/make_mfcc_pitch.sh --nj 10 --mfcc-config conf/mfcc_hires.conf --cmd run.pl --mem 2G data/train_sp_hires exp/make_hires/train_sp mfcc_perturbed_hires
+utils/validate_data_dir.sh: Successfully validated data-directory data/train_sp_hires
+steps/make_mfcc_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+steps/make_mfcc_pitch.sh: Succeeded creating MFCC and pitch features for train_sp_hires
+steps/compute_cmvn_stats.sh data/train_sp_hires exp/make_hires/train_sp mfcc_perturbed_hires
+Succeeded creating CMVN stats for train_sp_hires
+fix_data_dir.sh: kept all 24000 utterances.
+fix_data_dir.sh: old files are kept in data/train_sp_hires/.backup
+utils/copy_data_dir.sh: copied data from data/train_sp_hires to data/train_sp_hires_nopitch
+utils/validate_data_dir.sh: Successfully validated data-directory data/train_sp_hires_nopitch
+utils/data/limit_feature_dim.sh: warning: removing data/train_sp_hires_nopitch/cmvn.cp, you will have to regenerate it from the features.
+utils/validate_data_dir.sh: Successfully validated data-directory data/train_sp_hires_nopitch
+steps/compute_cmvn_stats.sh data/train_sp_hires_nopitch exp/make_hires/train_sp mfcc_perturbed_hires
+Succeeded creating CMVN stats for train_sp_hires_nopitch
+steps/make_mfcc_pitch.sh --nj 10 --mfcc-config conf/mfcc_hires.conf --cmd run.pl --mem 2G data/dev_hires exp/make_hires/dev mfcc_perturbed_hires
+steps/make_mfcc_pitch.sh: moving data/dev_hires/feats.scp to data/dev_hires/.backup
+utils/validate_data_dir.sh: Successfully validated data-directory data/dev_hires
+steps/make_mfcc_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+steps/make_mfcc_pitch.sh: Succeeded creating MFCC and pitch features for dev_hires
+steps/compute_cmvn_stats.sh data/dev_hires exp/make_hires/dev mfcc_perturbed_hires
+Succeeded creating CMVN stats for dev_hires
+fix_data_dir.sh: kept all 14326 utterances.
+fix_data_dir.sh: old files are kept in data/dev_hires/.backup
+utils/copy_data_dir.sh: copied data from data/dev_hires to data/dev_hires_nopitch
+utils/validate_data_dir.sh: Successfully validated data-directory data/dev_hires_nopitch
+utils/data/limit_feature_dim.sh: warning: removing data/dev_hires_nopitch/cmvn.cp, you will have to regenerate it from the features.
+utils/validate_data_dir.sh: Successfully validated data-directory data/dev_hires_nopitch
+steps/compute_cmvn_stats.sh data/dev_hires_nopitch exp/make_hires/dev mfcc_perturbed_hires
+Succeeded creating CMVN stats for dev_hires_nopitch
+steps/make_mfcc_pitch.sh --nj 10 --mfcc-config conf/mfcc_hires.conf --cmd run.pl --mem 2G data/test_hires exp/make_hires/test mfcc_perturbed_hires
+steps/make_mfcc_pitch.sh: moving data/test_hires/feats.scp to data/test_hires/.backup
+utils/validate_data_dir.sh: Successfully validated data-directory data/test_hires
+steps/make_mfcc_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+steps/make_mfcc_pitch.sh: Succeeded creating MFCC and pitch features for test_hires
+steps/compute_cmvn_stats.sh data/test_hires exp/make_hires/test mfcc_perturbed_hires
+Succeeded creating CMVN stats for test_hires
+fix_data_dir.sh: kept all 7176 utterances.
+fix_data_dir.sh: old files are kept in data/test_hires/.backup
+utils/copy_data_dir.sh: copied data from data/test_hires to data/test_hires_nopitch
+utils/validate_data_dir.sh: Successfully validated data-directory data/test_hires_nopitch
+utils/data/limit_feature_dim.sh: warning: removing data/test_hires_nopitch/cmvn.cp, you will have to regenerate it from the features.
+utils/validate_data_dir.sh: Successfully validated data-directory data/test_hires_nopitch
+steps/compute_cmvn_stats.sh data/test_hires_nopitch exp/make_hires/test mfcc_perturbed_hires
+Succeeded creating CMVN stats for test_hires_nopitch
+local/nnet3/run_tdnn.sh: creating neural net configs
+tree-info exp/tri5a_sp_ali/tree 
+steps/nnet3/xconfig_to_configs.py --xconfig-file exp/nnet3/new_dnn_sp/configs/network.xconfig --config-dir exp/nnet3/new_dnn_sp/configs/
+nnet3-init exp/nnet3/new_dnn_sp/configs//init.config exp/nnet3/new_dnn_sp/configs//init.raw 
+LOG (nnet3-init[5.5.1020~1-501de]:main():nnet3-init.cc:80) Initialized raw neural net and wrote it to exp/nnet3/new_dnn_sp/configs//init.raw
+nnet3-info exp/nnet3/new_dnn_sp/configs//init.raw 
+nnet3-init exp/nnet3/new_dnn_sp/configs//ref.config exp/nnet3/new_dnn_sp/configs//ref.raw 
+LOG (nnet3-init[5.5.1020~1-501de]:main():nnet3-init.cc:80) Initialized raw neural net and wrote it to exp/nnet3/new_dnn_sp/configs//ref.raw
+nnet3-info exp/nnet3/new_dnn_sp/configs//ref.raw 
+nnet3-init exp/nnet3/new_dnn_sp/configs//ref.config exp/nnet3/new_dnn_sp/configs//ref.raw 
+LOG (nnet3-init[5.5.1020~1-501de]:main():nnet3-init.cc:80) Initialized raw neural net and wrote it to exp/nnet3/new_dnn_sp/configs//ref.raw
+nnet3-info exp/nnet3/new_dnn_sp/configs//ref.raw 
+2022-05-21 14:19:33,138 [steps/nnet3/train_dnn.py:36 - <module> - INFO ] Starting DNN trainer (train_dnn.py)
+steps/nnet3/train_dnn.py --stage=-10 --cmd=run.pl --mem 4G --feat.cmvn-opts=--norm-means=false --norm-vars=false --trainer.num-epochs 4 --trainer.optimization.num-jobs-initial 3 --trainer.optimization.num-jobs-final 3 --trainer.optimization.initial-effective-lrate 0.0015 --trainer.optimization.final-effective-lrate 0.00015 --egs.dir  --cleanup.remove-egs true --cleanup.preserve-model-interval 500 --use-gpu false --trainer.optimization.minibatch-size 128 --feat-dir=data/train_sp_hires --ali-dir exp/tri5a_sp_ali --lang data/lang --dir=exp/nnet3/new_dnn_sp
+['steps/nnet3/train_dnn.py', '--stage=-10', '--cmd=run.pl --mem 4G', '--feat.cmvn-opts=--norm-means=false --norm-vars=false', '--trainer.num-epochs', '4', '--trainer.optimization.num-jobs-initial', '3', '--trainer.optimization.num-jobs-final', '3', '--trainer.optimization.initial-effective-lrate', '0.0015', '--trainer.optimization.final-effective-lrate', '0.00015', '--egs.dir', '', '--cleanup.remove-egs', 'true', '--cleanup.preserve-model-interval', '500', '--use-gpu', 'false', '--trainer.optimization.minibatch-size', '128', '--feat-dir=data/train_sp_hires', '--ali-dir', 'exp/tri5a_sp_ali', '--lang', 'data/lang', '--dir=exp/nnet3/new_dnn_sp']
+2022-05-21 14:19:33,139 [steps/nnet3/train_dnn.py:149 - process_args - WARNING ] Without using a GPU this will be very slow. nnet3 does not yet support multiple threads.
+2022-05-21 14:19:33,140 [steps/nnet3/train_dnn.py:178 - train - INFO ] Arguments for the experiment
+{'ali_dir': 'exp/tri5a_sp_ali',
+ 'backstitch_training_interval': 1,
+ 'backstitch_training_scale': 0.0,
+ 'cleanup': True,
+ 'cmvn_opts': '--norm-means=false --norm-vars=false',
+ 'combine_sum_to_one_penalty': 0.0,
+ 'command': 'run.pl --mem 4G',
+ 'compute_per_dim_accuracy': False,
+ 'dir': 'exp/nnet3/new_dnn_sp',
+ 'do_final_combination': True,
+ 'dropout_schedule': None,
+ 'egs_command': None,
+ 'egs_dir': None,
+ 'egs_opts': None,
+ 'egs_stage': 0,
+ 'email': None,
+ 'exit_stage': None,
+ 'feat_dir': 'data/train_sp_hires',
+ 'final_effective_lrate': 0.00015,
+ 'frames_per_eg': 8,
+ 'initial_effective_lrate': 0.0015,
+ 'input_model': None,
+ 'lang': 'data/lang',
+ 'max_lda_jobs': 10,
+ 'max_models_combine': 20,
+ 'max_objective_evaluations': 30,
+ 'max_param_change': 2.0,
+ 'minibatch_size': '128',
+ 'momentum': 0.0,
+ 'num_epochs': 4.0,
+ 'num_jobs_compute_prior': 10,
+ 'num_jobs_final': 3,
+ 'num_jobs_initial': 3,
+ 'num_jobs_step': 1,
+ 'online_ivector_dir': None,
+ 'preserve_model_interval': 500,
+ 'presoftmax_prior_scale_power': -0.25,
+ 'prior_subset_size': 20000,
+ 'proportional_shrink': 0.0,
+ 'rand_prune': 4.0,
+ 'remove_egs': True,
+ 'reporting_interval': 0.1,
+ 'samples_per_iter': 400000,
+ 'shuffle_buffer_size': 5000,
+ 'srand': 0,
+ 'stage': -10,
+ 'train_opts': [],
+ 'use_gpu': 'no'}
+2022-05-21 14:19:33,652 [steps/nnet3/train_dnn.py:228 - train - INFO ] Initializing a basic network for estimating preconditioning matrix
+2022-05-21 14:19:33,712 [steps/nnet3/train_dnn.py:238 - train - INFO ] Generating egs
+steps/nnet3/get_egs.sh --cmd run.pl --mem 4G --cmvn-opts --norm-means=false --norm-vars=false --online-ivector-dir  --left-context 10 --right-context 10 --left-context-initial -1 --right-context-final -1 --stage 0 --samples-per-iter 400000 --frames-per-eg 8 --srand 0 data/train_sp_hires exp/tri5a_sp_ali exp/nnet3/new_dnn_sp/egs
+File data/train_sp_hires/utt2uniq exists, so augmenting valid_uttlist to
+include all perturbed versions of the same 'real' utterances.
+steps/nnet3/get_egs.sh: creating egs.  To ensure they are not deleted later you can do:  touch exp/nnet3/new_dnn_sp/egs/.nodelete
+steps/nnet3/get_egs.sh: feature type is raw, with 'apply-cmvn'
+steps/nnet3/get_egs.sh: working out number of frames of training data
+steps/nnet3/get_egs.sh: working out feature dim
+steps/nnet3/get_egs.sh: creating 4 archives, each with 339252 egs, with
+steps/nnet3/get_egs.sh:   8 labels per example, and (left,right) context = (10,10)
+steps/nnet3/get_egs.sh: copying data alignments
+copy-int-vector ark:- ark,scp:exp/nnet3/new_dnn_sp/egs/ali.ark,exp/nnet3/new_dnn_sp/egs/ali.scp 
+LOG (copy-int-vector[5.5.1020~1-501de]:main():copy-int-vector.cc:83) Copied 24000 vectors of int32.
+steps/nnet3/get_egs.sh: Getting validation and training subset examples.
+steps/nnet3/get_egs.sh: ... extracting validation and training-subset alignments.
+... Getting subsets of validation examples for diagnostics and combination.
+steps/nnet3/get_egs.sh: Generating training examples on disk
+steps/nnet3/get_egs.sh: recombining and shuffling order of archives on disk
+steps/nnet3/get_egs.sh: removing temporary archives
+steps/nnet3/get_egs.sh: removing temporary alignments
+steps/nnet3/get_egs.sh: Finished preparing training examples
+2022-05-21 14:19:59,768 [steps/nnet3/train_dnn.py:276 - train - INFO ] Computing the preconditioning matrix for input features
+2022-05-21 14:20:10,585 [steps/nnet3/train_dnn.py:287 - train - INFO ] Computing initial vector for FixedScaleComponent before softmax, using priors^-0.25 and rescaling to average 1
+2022-05-21 14:20:11,417 [steps/nnet3/train_dnn.py:294 - train - INFO ] Preparing the initial acoustic model.
+2022-05-21 14:20:11,872 [steps/nnet3/train_dnn.py:319 - train - INFO ] Training will run for 4.0 epochs = 42 iterations
+2022-05-21 14:20:11,872 [steps/nnet3/train_dnn.py:355 - train - INFO ] Iter: 0/41   Jobs: 3   Epoch: 0.00/4.0 (0.0% complete)   lr: 0.004500   
+2022-05-21 14:29:11,585 [steps/nnet3/train_dnn.py:355 - train - INFO ] Iter: 1/41   Jobs: 3   Epoch: 0.09/4.0 (2.3% complete)   lr: 0.004264   
+2022-05-21 14:34:42,904 [steps/nnet3/train_dnn.py:355 - train - INFO ] Iter: 2/41   Jobs: 3   Epoch: 0.19/4.0 (4.7% complete)   lr: 0.004040   
+2022-05-21 14:40:01,401 [steps/nnet3/train_dnn.py:355 - train - INFO ] Iter: 3/41   Jobs: 3   Epoch: 0.28/4.0 (7.0% complete)   lr: 0.003827   
+2022-05-21 14:44:43,231 [steps/nnet3/train_dnn.py:355 - train - INFO ] Iter: 4/41   Jobs: 3   Epoch: 0.38/4.0 (9.4% complete)   lr: 0.003626   
+2022-05-21 14:49:28,722 [steps/nnet3/train_dnn.py:355 - train - INFO ] Iter: 5/41   Jobs: 3   Epoch: 0.47/4.0 (11.7% complete)   lr: 0.003436   
+2022-05-21 14:53:52,902 [steps/nnet3/train_dnn.py:355 - train - INFO ] Iter: 6/41   Jobs: 3   Epoch: 0.56/4.0 (14.1% complete)   lr: 0.003255   
+2022-05-21 14:58:02,506 [steps/nnet3/train_dnn.py:355 - train - INFO ] Iter: 7/41   Jobs: 3   Epoch: 0.66/4.0 (16.4% complete)   lr: 0.003084   
+2022-05-21 15:02:03,379 [steps/nnet3/train_dnn.py:355 - train - INFO ] Iter: 8/41   Jobs: 3   Epoch: 0.75/4.0 (18.8% complete)   lr: 0.002922   
+2022-05-21 15:05:53,787 [steps/nnet3/train_dnn.py:355 - train - INFO ] Iter: 9/41   Jobs: 3   Epoch: 0.84/4.0 (21.1% complete)   lr: 0.002769   
+2022-05-21 15:09:44,438 [steps/nnet3/train_dnn.py:355 - train - INFO ] Iter: 10/41   Jobs: 3   Epoch: 0.94/4.0 (23.4% complete)   lr: 0.002623   
+2022-05-21 15:13:23,303 [steps/nnet3/train_dnn.py:355 - train - INFO ] Iter: 11/41   Jobs: 3   Epoch: 1.03/4.0 (25.8% complete)   lr: 0.002485   
+2022-05-21 15:17:03,735 [steps/nnet3/train_dnn.py:355 - train - INFO ] Iter: 12/41   Jobs: 3   Epoch: 1.12/4.0 (28.1% complete)   lr: 0.002355   
+2022-05-21 15:20:33,675 [steps/nnet3/train_dnn.py:355 - train - INFO ] Iter: 13/41   Jobs: 3   Epoch: 1.22/4.0 (30.5% complete)   lr: 0.002231   
+2022-05-21 15:23:55,231 [steps/nnet3/train_dnn.py:355 - train - INFO ] Iter: 14/41   Jobs: 3   Epoch: 1.31/4.0 (32.8% complete)   lr: 0.002114   
+2022-05-21 15:27:06,939 [steps/nnet3/train_dnn.py:355 - train - INFO ] Iter: 15/41   Jobs: 3   Epoch: 1.41/4.0 (35.2% complete)   lr: 0.002003   
+2022-05-21 15:30:26,518 [steps/nnet3/train_dnn.py:355 - train - INFO ] Iter: 16/41   Jobs: 3   Epoch: 1.50/4.0 (37.5% complete)   lr: 0.001898   
+2022-05-21 15:33:38,799 [steps/nnet3/train_dnn.py:355 - train - INFO ] Iter: 17/41   Jobs: 3   Epoch: 1.59/4.0 (39.8% complete)   lr: 0.001798   
+2022-05-21 15:36:46,407 [steps/nnet3/train_dnn.py:355 - train - INFO ] Iter: 18/41   Jobs: 3   Epoch: 1.69/4.0 (42.2% complete)   lr: 0.001703   
+2022-05-21 15:39:53,591 [steps/nnet3/train_dnn.py:355 - train - INFO ] Iter: 19/41   Jobs: 3   Epoch: 1.78/4.0 (44.5% complete)   lr: 0.001614   
+2022-05-21 15:42:59,991 [steps/nnet3/train_dnn.py:355 - train - INFO ] Iter: 20/41   Jobs: 3   Epoch: 1.88/4.0 (46.9% complete)   lr: 0.001529   
+2022-05-21 15:46:05,522 [steps/nnet3/train_dnn.py:355 - train - INFO ] Iter: 21/41   Jobs: 3   Epoch: 1.97/4.0 (49.2% complete)   lr: 0.001449   
+2022-05-21 15:49:01,767 [steps/nnet3/train_dnn.py:355 - train - INFO ] Iter: 22/41   Jobs: 3   Epoch: 2.06/4.0 (51.6% complete)   lr: 0.001373   
+2022-05-21 15:52:01,135 [steps/nnet3/train_dnn.py:355 - train - INFO ] Iter: 23/41   Jobs: 3   Epoch: 2.16/4.0 (53.9% complete)   lr: 0.001301   
+2022-05-21 15:55:02,931 [steps/nnet3/train_dnn.py:355 - train - INFO ] Iter: 24/41   Jobs: 3   Epoch: 2.25/4.0 (56.2% complete)   lr: 0.001232   
+2022-05-21 15:57:59,702 [steps/nnet3/train_dnn.py:355 - train - INFO ] Iter: 25/41   Jobs: 3   Epoch: 2.34/4.0 (58.6% complete)   lr: 0.001168   
+2022-05-21 16:00:57,374 [steps/nnet3/train_dnn.py:355 - train - INFO ] Iter: 26/41   Jobs: 3   Epoch: 2.44/4.0 (60.9% complete)   lr: 0.001106   
+2022-05-21 16:03:55,630 [steps/nnet3/train_dnn.py:355 - train - INFO ] Iter: 27/41   Jobs: 3   Epoch: 2.53/4.0 (63.3% complete)   lr: 0.001048   
+2022-05-21 16:06:51,823 [steps/nnet3/train_dnn.py:355 - train - INFO ] Iter: 28/41   Jobs: 3   Epoch: 2.62/4.0 (65.6% complete)   lr: 0.000993   
+2022-05-21 16:09:50,382 [steps/nnet3/train_dnn.py:355 - train - INFO ] Iter: 29/41   Jobs: 3   Epoch: 2.72/4.0 (68.0% complete)   lr: 0.000941   
+2022-05-21 16:12:46,534 [steps/nnet3/train_dnn.py:355 - train - INFO ] Iter: 30/41   Jobs: 3   Epoch: 2.81/4.0 (70.3% complete)   lr: 0.000891   
+2022-05-21 16:15:41,802 [steps/nnet3/train_dnn.py:355 - train - INFO ] Iter: 31/41   Jobs: 3   Epoch: 2.91/4.0 (72.7% complete)   lr: 0.000845   
+2022-05-21 16:18:40,011 [steps/nnet3/train_dnn.py:355 - train - INFO ] Iter: 32/41   Jobs: 3   Epoch: 3.00/4.0 (75.0% complete)   lr: 0.000800   
+2022-05-21 16:21:39,370 [steps/nnet3/train_dnn.py:355 - train - INFO ] Iter: 33/41   Jobs: 3   Epoch: 3.09/4.0 (77.3% complete)   lr: 0.000758   
+2022-05-21 16:24:38,922 [steps/nnet3/train_dnn.py:355 - train - INFO ] Iter: 34/41   Jobs: 3   Epoch: 3.19/4.0 (79.7% complete)   lr: 0.000718   
+2022-05-21 16:27:40,346 [steps/nnet3/train_dnn.py:355 - train - INFO ] Iter: 35/41   Jobs: 3   Epoch: 3.28/4.0 (82.0% complete)   lr: 0.000681   
+2022-05-21 16:30:37,438 [steps/nnet3/train_dnn.py:355 - train - INFO ] Iter: 36/41   Jobs: 3   Epoch: 3.38/4.0 (84.4% complete)   lr: 0.000645   
+2022-05-21 16:33:42,222 [steps/nnet3/train_dnn.py:355 - train - INFO ] Iter: 37/41   Jobs: 3   Epoch: 3.47/4.0 (86.7% complete)   lr: 0.000611   
+2022-05-21 16:36:45,926 [steps/nnet3/train_dnn.py:355 - train - INFO ] Iter: 38/41   Jobs: 3   Epoch: 3.56/4.0 (89.1% complete)   lr: 0.000579   
+2022-05-21 16:39:42,831 [steps/nnet3/train_dnn.py:355 - train - INFO ] Iter: 39/41   Jobs: 3   Epoch: 3.66/4.0 (91.4% complete)   lr: 0.000548   
+2022-05-21 16:42:39,083 [steps/nnet3/train_dnn.py:355 - train - INFO ] Iter: 40/41   Jobs: 3   Epoch: 3.75/4.0 (93.8% complete)   lr: 0.000520   
+2022-05-21 16:45:45,057 [steps/nnet3/train_dnn.py:355 - train - INFO ] Iter: 41/41   Jobs: 3   Epoch: 3.84/4.0 (96.1% complete)   lr: 0.000450   
+2022-05-21 16:48:46,479 [steps/nnet3/train_dnn.py:401 - train - INFO ] Doing final combination to produce final.mdl
+2022-05-21 16:48:46,479 [steps/libs/nnet3/train/frame_level_objf/common.py:491 - combine_models - INFO ] Combining set([32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 23, 24, 25, 26, 27, 28, 29, 30, 31]) models.
+2022-05-21 16:50:30,035 [steps/nnet3/train_dnn.py:410 - train - INFO ] Getting average posterior for purposes of adjusting the priors.
+2022-05-21 16:51:28,125 [steps/nnet3/train_dnn.py:421 - train - INFO ] Re-adjusting priors based on computed posteriors
+2022-05-21 16:51:28,202 [steps/nnet3/train_dnn.py:431 - train - INFO ] Cleaning up the experiment directory exp/nnet3/new_dnn_sp
+steps/nnet2/remove_egs.sh: Finished deleting examples in exp/nnet3/new_dnn_sp/egs
+exp/nnet3/new_dnn_sp: num-iters=42 nj=3..3 num-params=1.7M dim=43->2976 combine=-1.04->-1.03 (over 2) loglike:train/valid[27,41,combined]=(-1.08,-1.01,-1.01/-1.60,-1.59,-1.59) accuracy:train/valid[27,41,combined]=(0.67,0.69,0.69/0.56,0.56,0.57)
+steps/nnet3/decode.sh --nj 20 --cmd run.pl --mem 4G exp/tri5a/graph data/test_hires exp/nnet3/new_dnn_sp/decode_test
+steps/nnet3/decode.sh: feature type is raw
+steps/diagnostic/analyze_lats.sh --cmd run.pl --mem 4G --iter final exp/tri5a/graph exp/nnet3/new_dnn_sp/decode_test
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3/new_dnn_sp/decode_test/log/analyze_alignments.log
+Overall, lattice depth (10,50,90-percentile)=(2,11,84) and mean=34.6
+steps/diagnostic/analyze_lats.sh: see stats in exp/nnet3/new_dnn_sp/decode_test/log/analyze_lattice_depth_stats.log
+score best paths
++ steps/score_kaldi.sh --cmd 'run.pl --mem 4G' data/test_hires exp/tri5a/graph exp/nnet3/new_dnn_sp/decode_test
+steps/score_kaldi.sh --cmd run.pl --mem 4G data/test_hires exp/tri5a/graph exp/nnet3/new_dnn_sp/decode_test
+steps/score_kaldi.sh: scoring with word insertion penalty=0.0,0.5,1.0
++ steps/scoring/score_kaldi_cer.sh --stage 2 --cmd 'run.pl --mem 4G' data/test_hires exp/tri5a/graph exp/nnet3/new_dnn_sp/decode_test
+steps/scoring/score_kaldi_cer.sh --stage 2 --cmd run.pl --mem 4G data/test_hires exp/tri5a/graph exp/nnet3/new_dnn_sp/decode_test
+steps/scoring/score_kaldi_cer.sh: scoring with word insertion penalty=0.0,0.5,1.0
++ echo 'local/score.sh: Done'
+local/score.sh: Done
+score confidence and timing with sclite
+Decoding done.
+local/chain/run_tdnn.sh 
+local/nnet3/run_ivector_common.sh: preparing directory for low-resolution speed-perturbed data (for alignment)
+utils/data/perturb_data_dir_speed_3way.sh: data/train_sp/feats.scp already exists: refusing to run this (please delete data/train_sp/feats.scp if you want this to run)
+%WER 45.83 [ 48014 / 104765, 939 ins, 2821 del, 44254 sub ] exp/mono/decode_test/cer_10_0.0
+%WER 28.77 [ 30143 / 104765, 1199 ins, 1515 del, 27429 sub ] exp/tri1/decode_test/cer_14_0.5
+%WER 28.59 [ 29953 / 104765, 1384 ins, 1333 del, 27236 sub ] exp/tri2/decode_test/cer_13_0.5
+%WER 25.81 [ 27041 / 104765, 1012 ins, 1345 del, 24684 sub ] exp/tri3a/decode_test/cer_14_0.5
+%WER 20.49 [ 21465 / 104765, 912 ins, 847 del, 19706 sub ] exp/tri4a/decode_test/cer_13_0.5
+%WER 22.28 [ 23345 / 104765, 953 ins, 1223 del, 21169 sub ] exp/tri5a/decode_test/cer_17_1.0
+%WER 18.52 [ 19402 / 104765, 747 ins, 911 del, 17744 sub ] exp/nnet3/new_dnn_sp/decode_test/cer_11_1.0
