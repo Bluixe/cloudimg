@@ -1,1 +1,27 @@
-https://www.cs.toronto.edu/~kriz/cifar.html
+for epoch in range(epochs):
+    check = np.random.randint(0,10)
+    sta = jt.zeros(10)
+    for step, (images, labels) in enumerate(cifar_train):
+        image = jt.float32(images.permute(0,3,1,2))
+        label = jt.float32(labels)
+
+        mask_1 = (label >= 5)
+        mask_2 = (label < 5)
+        
+        images_1 = image[mask_1]
+        label_1 = label[mask_1]
+
+        images_2 = image[mask_2]
+        label_2 = label[mask_2]
+        tmp = int(len(label_2)/10)
+        label_2 = label_2[:tmp+1]
+        images_2 = images_2[:tmp+1,:,:,:]
+        
+        image = jt.concat((images_1,images_2))
+        label = jt.concat((label_1,label_2))
+
+        for item in label:
+            sta[item] += 1
+        s = sum(sta)
+        for i in range(10):
+            wt[i] = 0.1/(sta[i]/s)
