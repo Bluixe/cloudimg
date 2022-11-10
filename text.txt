@@ -1,3 +1,95 @@
+王浩然 2022/1/31 10:03:05
+
+
+王浩然 2022/1/31 10:03:49
+转会吧
+
+王浩然 2022/1/31 10:03:55
+别进监狱了
+
+王浩然 2022/1/31 10:03:57
+
+
+王浩然 2022/1/31 10:05:40
+“吉格斯接班人”
+
+Bluixe 2022/1/31 10:05:51
+
+
+王浩然 2022/1/31 10:06:41
+那这支曼联未来在哪
+
+Bluixe 2022/1/31 10:07:01
+接班了吉格斯的人品，没接班吉格斯的球品
+
+王浩然 2022/1/31 10:07:35
+只能指望桑宝了
+
+王浩然 2022/2/1 0:01:52
+文浩哥哥虎年快乐
+
+Bluixe 2022/2/1 0:02:44
+谢谢！浩然哥哥虎年快乐！
+
+王浩然 2022/2/1 10:34:42
+
+
+Bluixe 2022/2/1 17:06:20
+
+
+王浩然 2022/3/21 14:30:15
+linux的qq好奇怪
+
+王浩然 2022/3/21 14:30:33
+
+
+Bluixe 2022/3/21 14:35:14
+它似乎是很久没有更新了
+
+王浩然 2022/4/22 20:45:11
+
+
+Bluixe 2022/5/21 22:50:54
+
+
+对方已成功接收了你发送的离线文件“hw5.pdf”(206.32KB)。
+
+Bluixe 2022/5/24 11:11:15
+
+
+对方已成功接收了你发送的离线文件“张文浩part.docx”(22.14KB)。
+
+王浩然 2022/10/27 13:06:45
+
+
+王浩然 2022/10/27 13:06:47
+
+
+王浩然 2022/10/27 13:06:48
+
+
+王浩然 2022/10/27 13:06:49
+
+
+王浩然 2022/10/27 13:06:50
+
+
+王浩然 2022/10/27 13:46:58
+
+
+王浩然 2022/10/27 13:53:22
+
+
+王浩然 2022/10/27 14:00:55
+
+
+王浩然 2022/10/27 14:07:40
+
+
+王浩然 2022/10/27 14:27:22
+
+
+王浩然 19:49:11
 for epoch in range(epochs):
     check = np.random.randint(0,10)
     sta = jt.zeros(10)
@@ -25,3 +117,32 @@ for epoch in range(epochs):
         s = sum(sta)
         for i in range(10):
             wt[i] = 0.1/(sta[i]/s)
+
+王浩然 20:33:12
+class Network(Module):
+    def __init__(self):
+        super(Network, self).__init__()
+        self.activation = nn.ReLU()
+        self.pool = nn.Pool(2, 2)
+        self.conv1 = nn.Conv2d(3, 32, (3, 3))
+        self.conv2 = nn.Conv2d(32, 128, (3, 3))
+        self.conv3 = nn.Conv2d(128, 128, (3, 3))
+        self.extract = nn.Sequential(
+            self.conv1,
+            self.activation,
+            self.conv2,
+            self.activation,
+            self.conv3,
+            self.activation,
+        )
+        self.pool = nn.Pool(2, 2)
+        self.fc1 = nn.Linear(128*13*13, 1024)
+        self.fc2 = nn.Linear(1024, 10)
+    
+    def execute(self, x):
+        x = self.extract(x)
+        x = self.pool(x)
+        x = jt.flatten(x,1)
+        x = self.activation(self.fc1(x))
+        x = nn.Sigmoid()(self.fc2(x))
+        return x
